@@ -59,11 +59,11 @@ label.required::after {
 }
 
 /* create a progress bar */
-.form-step{
+.form-step {
     display: none;
 }
 
-.form-step-active{
+.form-step-active {
     display: block;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -363,9 +363,9 @@ label.required::after {
     margin-bottom: 20px;
 }
 
-.verify_title img{
-    width: 70px; 
-    height: 80px; 
+.verify_title img {
+    width: 70px;
+    height: 80px;
     margin-bottom: 20px;
 }
 
@@ -373,7 +373,7 @@ label.required::after {
     margin-right: 5px;
 }
 
-.verify_form hr{
+.verify_form hr {
     margin: 0 1rem;
     color: inherit;
     border: 0;
@@ -388,7 +388,7 @@ label.required::after {
     font-weight: 600;
 }
 
-.user_information{
+.user_information {
     display: flex;
     align-items: center;
     text-align: center;
@@ -399,74 +399,94 @@ label.required::after {
     border-radius: 3px;
 }
 
-.user_infor_inside{
+.user_infor_inside {
     display: flex;
     flex-direction: column;
     margin: 20px 50px 20px 50px;
 }
 
-.user_infor_inside_flex{
+.user_infor_inside_flex {
     display: flex;
     flex-direction: row;
 }
 
 /*  */
-.verty_rest{
+.verty_rest {
     display: flex;
     flex-direction: column;
     margin: 0 250px;
 }
 
-.room_infor_inside{
+.room_infor_inside {
     display: flex;
     flex-direction: row;
 }
 
-.room_infor_inside_flex{
+.room_infor_inside_flex {
     display: flex;
     flex-direction: row;
     margin: 0 50px;
 
 }
 
-.room_information{
+.room_information {
     margin: 20px 220px;
 }
 
-.room_information tr{
+.room_information tr {
     border-bottom: 1px solid #00000035;
     margin: 0 50px;
 }
 
-.room_information th{
+.room_information th {
     border-bottom: 0;
 }
 
-.room_information th, td{
+.room_information th,
+td {
     padding: 0 0 0 23px;
 }
 
 
 /* fav popup */
-.points .room_information{
+.points .room_information {
     margin: 20px 120px;
 }
 
 .popupWrap {
+    margin-top: 100px;
     background: #00000077;
     width: 80%;
-    height: 50%;
+    height: 700px;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
     /* display: none; */
+
 }
 
-.popupWrap i{
+.popupWrap i {
     position: relative;
+    /* Position absolute for the close button */
     left: 1090px;
-    bottom: 75px;    
+    bottom: 75px;
     color: white;
+}
+
+.popupWrap .scroll_bar {
+    max-height: 85%;
+    /* Set a maximum height for the popup */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    position: relative;
+    /* Add position relative to contain absolutely positioned close button */
+}
+
+.points{
+    border-bottom: 1px solid #ddd;
+    /* padding: 10px; */
+    margin: 0 30px;
+
 }
 
 .popupWindow {
@@ -508,3 +528,23 @@ label.required::after {
 .showPopupWindow {
     transform: translateY(0) scale(1);
 }
+
+/* Scroll down bar */
+/* .scroll_bar {
+    width: 200px;
+    height: 20px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #c70000 #fff;
+    margin: 0 0 0 50px;
+
+}
+
+.popupWrap{
+    overflow: hidden;
+}
+.popupWrap::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+    background-color: #c70000;
+} */

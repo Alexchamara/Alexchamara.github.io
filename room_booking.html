@@ -1195,80 +1195,89 @@
                 <h2 style="text-align: center; color: white;">Your Favourite Booking!</h2>
                 <!-- <p style="font-size: 50px;"></p> -->
                 <i class="fa fa-close fa-2x" id="closeBtn"></i>
-                <template x-for="favorite in favorites">
-                    <div class="points" style="color: aliceblue; display: flex;">
-                        <div>
-                            <table class="room_information">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2"
-                                            style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
-                                            Accommodation</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Singale Room x <span x-text="favorite.singleRoomsNum"></span>
-                                        </td>
-                                        <td>LKR <span x-text="favorite.singleRoomsNum * 25000"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Double Room x <span x-text="favorite.doubleRoomsNum"></span>
-                                        </td>
-                                        <td>LKR <span x-text="favorite.doubleRoomsNum * 35000"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Triple Room x <span x-text="favorite.tripleRoomsNum"></span>
-                                        </td>
-                                        <td>LKR <span x-text="favorite.tripleRoomsNum * 40000"></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Extra Bed x <span x-text="favorite.extra_bed"></span></td>
-                                        <td>LKR <span x-text="favorite.extra_bed * 8000"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kids Above 5 Years x <span x-text="favorite.children"></span>
-                                        </td>
-                                        <td>LKR <span x-text="favorite.children * 5000"></span> extra for
-                                            meals
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th colspan="2"
-                                            style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
-                                            Cost of Booking
-                                        </th>
-                                    </tr>
-                                </tbody>
-                                <tbody>
-                                    <tr>
-                                        <td>Total of Accommodation</td>
-                                        <td>LKR <span x-text="total_accommodation_cost"></span></td>
-                                    </tr>
-                                    <tr>
+                <div class="scroll_bar">
+                    <template x-for="favorite in favorites">
+                        <div class="points" style="color: aliceblue; display: flex;">
+                            <div>
+                                <table class="room_information">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"
+                                                style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
+                                                Accommodation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Singale Room x <span x-text="favorite.singleRoomsNum"></span>
+                                            </td>
+                                            <td>LKR <span x-text="favorite.singleRoomsNum * 25000"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Double Room x <span x-text="favorite.doubleRoomsNum"></span>
+                                            </td>
+                                            <td>LKR <span x-text="favorite.doubleRoomsNum * 35000"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Triple Room x <span x-text="favorite.tripleRoomsNum"></span>
+                                            </td>
+                                            <td>LKR <span x-text="favorite.tripleRoomsNum * 40000"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Extra Bed x <span x-text="favorite.extra_bed"></span></td>
+                                            <td>LKR <span x-text="favorite.extra_bed * 8000"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kids Above 5 Years x <span x-text="favorite.children"></span>
+                                            </td>
+                                            <td>LKR <span x-text="favorite.children * 5000"></span> extra for
+                                                meals
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Adults</td>
+                                            <td><span x-text="favorite.adults"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Infant</td>
+                                            <td><span x-text="favorite.infant"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2"
+                                                style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
+                                                Cost of Booking
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>Total of Accommodation</td>
+                                            <td>LKR <span x-text="total_accommodation_cost"></span></td>
+                                        </tr>
+                                        <!-- <tr>
                                         <td>Total Discount</td>
-                                        <td>LKR <span x-text="$store.user.reservation.total_discount"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Final Total</b></td>
-                                        <td><b>LKR <span x-text="$store.user.reservation.final_total"></span></td></b>
-                                    </tr>
-                            </table>
-                            <button class="btn width_200" style="margin-left: auto; margin-top: 25px; width: 315px;"
-                                x-on:click="applyFavorite(favorite)">Apply
-                                Favourite</button>
+                                        <td>LKR <span x-text="favorite.total_discount"></span></td>
+                                    </tr> -->
+                                        <tr>
+                                            <td><b>Final Total</b></td>
+                                            <td><b>LKR <span x-text="favorite.final_total"></span></td></b>
+                                        </tr>
+                                </table>
+                                <button class="btn width_200" style="margin-left: auto; margin-top: 25px; width: 315px;"
+                                    x-on:click="applyFavorite(favorite)">Apply Favourite</button>
+                            </div>
                         </div>
-                    </div>
-                </template>
+                    </template>
+                </div>
             </div>
         </div>
     </div>

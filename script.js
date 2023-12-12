@@ -123,7 +123,7 @@ function toggleParticipants(nationality) {
 }
 
 
-// 
+// This is for favorite popup window
 const background = document.getElementById("blurBackGround");
 const popup = document.getElementById("popup");
 const fav = document.getElementById("addFav");
