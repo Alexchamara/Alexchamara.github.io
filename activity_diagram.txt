@@ -1,0 +1,19 @@
+-enter the details of the guest
+-input the promo code
+-select the date or date range
+-select the type of the room & number of rooms
+-select the number of adults and children
+-select extra ameities wifi, pool view, garden view and number of extra beds
+-show the loyality points
+-if you want you can click the favourite button and apply the previous accommodation details did you add 
+-click on the check availability button
+-if the room is available you can proceed to book by clikcing on the button next
+-if the room is not available you can check the availability of other rooms by changing the date
+-select the adventure activities
+-select the the date & the time
+-select the local adults, local children, foreign adults, foreign children
+-select either adult guide or children giude for the activities if required
+-click on the adventure booking button
+-enter the payment details
+-if the payment is succesful , the booking is confirmed and the boking details must be displayed
+-if click add to favourite button you can save your accommodation details

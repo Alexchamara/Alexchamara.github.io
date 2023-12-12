@@ -1,0 +1,23 @@
+/* style branch table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1.5px solid rgb(181, 147, 63);
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Outfit', sans-serif;
+    background-color: rgba(128, 128, 128, 0.234);
+}
+
+th {
+    background-color: rgba(128, 128, 128, 0.234);
+}
+
+tfoot .tfooter{
+    background-color: rgba(128, 128, 128, 0.234);
+    font-weight: bold;
+}

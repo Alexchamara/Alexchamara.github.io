@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.06rem;
+    background-image: url(/images/event_02/pngaaa.com-63908.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 59, 59, 0.594);
+    background-blend-mode: soft-light;
+}
+
+a { 
+    text-decoration: none;
+    cursor:pointer;
+    background-color: transparent;
+}
+
+hr{
+    opacity: 0.5;
+    margin: 50px 0;  
+    background-color: #000;  
+}
+
+/* add animation */
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+   100%{
+       opacity: 1;
+       transform: translateY(0px);
+   }
+}
+
+/* style header */
+header{
+    height: 95px;
+    background: #000000b1;
+    z-index: 999;
+}
+
+.main-logo img{
+    height: 116px;
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    transform: translate(-50%, -50%);
+}
+
+/* style main intro */
+.main_event2_body{
+    margin: 30px 20px 30px 20px;
+}
+
+.intro_container{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.main_titel{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.main_titel h1{
+    animation-delay: 0.3s;
+}
+
+.main_intro{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro_container .main_intro p{
+    padding: 10px 50px 20px 50px;
+    animation-delay: 0.6s;
+}
+
+.main_image{
+    display: flex;
+    width: 100%;
+}
+
+.event_details_container{
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 50px 50px 28px 30px;
+}
+
+.event_details{
+    display: flex;
+    padding: 30px 0;
+    align-items: baseline;
+}
+
+.main_image{
+    animation-delay: 0.9s;
+}
+
+.main_image section{
+    display: flex;
+    flex-direction: column;
+}
+
+.event_details_container .event_details .detail_body p{
+    margin-left: 40px;
+}
+
+/* style game section */
+.types_of_games{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.types_of_games img{
+    width: 44%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.types_of_games ul{
+    padding: 46px;
+    background-color: #ff000037;
+    /* color: white; */
+}
+
+.types_of_games ul li{
+    margin-bottom: 30px;
+}
+
+/* style ticket section */
+.ticket_body{
+    display: flex;
+    margin: 50px 50px;
+    justify-content: space-around;
+}
+
+.ticket_body_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #ff000037;
+}
+
+.ticket_body_price{
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.ticket_body_price p{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ticket_body_price a{
+    margin-top: 10px;
+}
+
+.book-button{
+    padding: 6px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+/* style footer */
+footer{
+    margin-top: 100px;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    box-shadow: -7px -7px 10px #808080, 7px 7px 10px #808080;
+}
+
+footer a{
+    color: white;
+}
+
+.footer_flex{
+    display: flex;
+    justify-content: center;
+}
+
+.footer_infor{
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 26px;
+    padding: 20px 80px 20px 0;
+    
+}
+
+.footer_infor .s_icon ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_infor .s_icon li a{
+    margin: 0 21px;
+}
+
+/* style responsive part */
+@media screen and (max-width: 767px) {
+    /* intro section */
+    .event_details_container{
+        padding: 10px 50px 15px 30px;
+    }
+
+    .event_details{
+        padding: 15px 0;
+    }
+
+    /* style game section */
+    .types_of_games img{
+        width: 265px;
+        height: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+        .types_of_games img{
+            display: none;
+        }
+    }
+
+    .types_of_games ul{
+        padding: 21px;
+        position: relative;
+        right: 20px;
+    }
+
+    .types_of_games ul li{
+        margin-bottom: 5px;
+    }
+
+    /* ticket section */
+    .ticket_body{
+        flex-direction: column;
+    }
+
+
+}
+
+@media screen and (max-width: 1190px) {
+    .main_image{
+        flex-direction: column;
+    }
+
+    .footer_infor{
+        padding: 0;
+    }
+}
+
+/* responsive titels */
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 25px;
+    }
+
+    h2, h3{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+}

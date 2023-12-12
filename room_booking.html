@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reservations | Room Section | Rimberio Royal Hotel</title>
+    <link rel="icon" type="image/png" href="/images/Home/icon_white.webp">
+    <!-- use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Outfit:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="manifest" href="/site.webmanifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/booking.css">
+    <script src="/script.js" defer></script>
+
+
+</head>
+
+<body>
+    <header class="main_navigation" id="main_navigation">
+        <section class="main-logo" id="booking_logo">
+            <a href="/index.html"><img src="images/Home/Main_Logo_02.webp" alt="hotel logo" id="booking_logo"></a>
+        </section>
+    </header>
+
+    <main class="main_booking_body" x-data="app">
+        <article class="booking_main_container">
+            <h1
+                style="text-transform: uppercase; text-align: center; font-weight: 1000; letter-spacing: 0.4rem; padding: 20px 0; font-family: 'Outfit', sans-serif;">
+                Reservation</h1>
+            <!-- create booking form for room section -->
+            <!-- progress bar -->
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+                <div class="progressbar_step progressbar_step_active" data-title="Accommodation"></div>
+                <div class="progressbar_step" data-title="Adventure"></div>
+                <div class="progressbar_step" data-title="Payment"></div>
+                <div class="progressbar_step" data-title="Verification  "></div>
+            </div>
+
+            <!-- steps -->
+            <!-- user information booking section -->
+            <!-- accomodation booking section -->
+            <form x-on:submit.prevent="$store.user.updateUser">
+                <!-- Guest information section -->
+                <div class="form-step form-step-active">
+                    <section class="guest_infor">
+                        <h2>Guest Information</h2>
+                        <section class="first_row">
+                            <section class="name_titel">
+                                <label for="name">Titel</label>
+                                <select name="titel" id="titel" style="height: 40px; width: 100px;" aria-label="titel"
+                                    x-model="$store.user.profile.titel">
+                                    <option>Select</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Ms.">Ms.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Rev.">Rev.</option>
+                                </select>
+                            </section>
+                        </section>
+                        <section class="second_row">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="first name" class="required">First Name<span
+                                            class="required"></span></label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="text" name="first_name" id="first_name" aria-label="First name"
+                                        x-model="$store.user.profile.firstName">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name" class="required">Last Name<span
+                                            class="required"></span></label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="text" name="Last_name" id="Last_name" aria-label="Last name"
+                                        x-model="$store.user.profile.lastName">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Contry" class="required">Country<span class="required"></span></label>
+                                </section>
+                                <section class="name_flex">
+                                    <select name="Contry" id="Contry" aria-label="types of contries"
+                                        style="padding: 8px 95px;" x-model="$store.user.profile.contry">
+                                        <option>Select</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Aland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, Democratic Republic of the Congo</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Cote D'Ivoire</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CW">Curacao</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                        <option value="FO">Faroe Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GG">Guernsey</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard Island and Mcdonald Islands</option>
+                                        <option value="VA">Holy See (Vatican City State)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran, Islamic Republic of</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IM">Isle of Man</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JE">Jersey</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea, Democratic People's Republic of</option>
+                                        <option value="KR">Korea, Republic of</option>
+                                        <option value="XK">Kosovo</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao People's Democratic Republic</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libyan Arab Jamahiriya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macao</option>
+                                        <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia, Federated States of</option>
+                                        <option value="MD">Moldova, Republic of</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="AN">Netherlands Antilles</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestinian Territory, Occupied</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Reunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="BL">Saint Barthelemy</option>
+                                        <option value="SH">Saint Helena</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="MF">Saint Martin</option>
+                                        <option value="PM">Saint Pierre and Miquelon</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="CS">Serbia and Montenegro</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SX">Sint Maarten</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="SS">South Sudan</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TW">Taiwan, Province of China</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic of</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VG">Virgin Islands, British</option>
+                                        <option value="VI">Virgin Islands, U.s.</option>
+                                        <option value="WF">Wallis and Futuna</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="third_row">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="first name" class="required">Phone<span class="required"></span></label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="text" name="guest_phone" id="guest_phone" aria-label="Phone name"
+                                        maxlength="20" placeholder="+94710000000" x-model="$store.user.profile.phone">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name" class="required">Address<span
+                                            class="required"></span></label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="text" name="guest_address" id="guest_address" aria-label="Address"
+                                        x-model="$store.user.profile.address">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name" class="required">Email<span class="required"></span></label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="text" name="guest_email" id="guest_email" aria-label="Email"
+                                        placeholder="name@example.com" x-model="$store.user.profile.email">
+                                </section>
+                            </section>
+                        </section>
+                        <section class="forth_row">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="first name">Special Request</label>
+                                </section>
+                                <section class="name_flex">
+                                    <textarea id="w3review" name="w3review" rows="7" cols="120"
+                                        x-model="$store.user.profile.spacial_request">
+                                    </textarea>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                    <!-- Accommodation section -->
+                    <section class="room_section">
+                        <div style="display: flex; justify-content: space-between;">
+                            <h2>Accommodation Booking Details</h2>
+                            <div style="display: flex; flex-direction: column;">
+                                <a href="#fav" id="addFav"><i class="fa fa-bookmark fa-beat-fade"
+                                        style="--fa-secondary-opacity: 0.3; padding: 20px 20px 10px 25px; font-size: 30px; color: black;"></i></a>
+                                <a href="#fav" id="addFav">
+                                    <lable style="padding-right: 10px; color: black;"><b>Favourite</b></lable>
+                                </a>
+                            </div>
+                        </div>
+                        <section class="cheacking_dates">
+                            <section class="cheack-btn">
+                                <section class="cheack_btn_flex">
+                                    <label for="check-in">Hotel: </label>
+                                </section>
+                                <section class="cheack_btn_flex">
+                                    <section class="room_price">
+                                        <select name="Hotel_Name" id="Hotel_Name" aria-label="Hotel_Name">
+                                            <option x-text="$store.hotel.hotelName"></option>
+                                        </select>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="cheack-btn">
+                                <section class="cheack_btn_flex">
+                                    <label for="check-out">Promo Code:</label>
+                                </section>
+                                <section class="cheack_btn_flex">
+                                    <input type="text" name="Promo_code" id="Promo_code"
+                                        x-bind:value="$store.user.reservation.promo_code"
+                                        x-model="$store.user.reservation.promo_code">
+                                </section>
+                            </section>
+                        </section>
+                        <h4>Check Availbility:</h4>
+                        <section class="cheacking_dates">
+                            <section class="cheack-btn">
+                                <section class="cheack_btn_flex">
+                                    <label for="check-in" class="required">Check-in<span
+                                            class="required"></span>:</label>
+                                </section>
+                                <section class="cheack_btn_flex">
+                                    <input type="date" name="check-in" id="check_in"
+                                        x-bind:value="$store.user.reservation.check_in"
+                                        x-model="$store.user.reservation.check_in">
+                                </section>
+                            </section>
+                            <section class="cheack-btn">
+                                <section class="cheack_btn_flex">
+                                    <label for="check-out" class="required">Check-out:<span
+                                            class="required"></span></label>
+                                </section>
+                                <section class="cheack_btn_flex">
+                                    <input type="date" name="check-out" id="check_out"
+                                        x-bind:value="$store.user.reservation.check_out"
+                                        x-model="$store.user.reservation.check_out">
+                                </section>
+                            </section>
+                        </section>
+                        <h4>Available Rooms:</h4>
+                        <section class="booking_input">
+                            <section class="room_price">
+                                <div class="input_box selection">
+                                    <div class="room_type_flex">
+                                        <input type="checkbox" id="single" name="room_type" value="Single"
+                                            style="height: fit-content; width: fit-content;"
+                                            x-model="$store.user.reservation.type_of_room">
+                                        <label for="single">Single Room</label>
+                                        <div class="num-of-rooms num-single">
+                                            <label for="single_room_num">Number of Single Rooms</label>
+                                            <input type="number" id="single_room_num" min="0" value="0"
+                                                x-model="$store.user.reservation.singleRoomsNum">
+                                            Price: <span x-text="$store.user.reservation.singleRoomsNum * 25000"></span>
+                                        </div>
+                                    </div>
+                                    <div class="room_type_flex">
+                                        <input type="checkbox" id="double" name="room_type" value="double"
+                                            style="height: fit-content; width: fit-content;">
+                                        <label for="double">Double Room</label>
+                                        <div class="num-of-rooms num-double">
+                                            <label for="double_room_num">Number of Double Rooms</label>
+                                            <input type="number" id="double_room_num" min="0" value="0"
+                                                x-model="$store.user.reservation.doubleRoomsNum">
+                                            Price: <span x-text="$store.user.reservation.doubleRoomsNum * 35000"></span>
+                                        </div>
+                                    </div>
+                                    <div class="room_type_flex">
+                                        <input type="checkbox" id="triple" name="room_type" value="triple"
+                                            style="height: fit-content; width: fit-content;">
+                                        <label for="triple">Triple Room</label>
+                                        <div class="num-of-rooms num-triple">
+                                            <label for="triple_room_num">Number of Triple Rooms</label>
+                                            <input type="number" id="triple_room_num" min="0" value="0"
+                                                x-model="$store.user.reservation.tripleRoomsNum">
+                                            Price: <span x-text="$store.user.reservation.tripleRoomsNum * 40000"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <h4>Number of Participants:</h4>
+                        <section class="third_row">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="first name">Infant (Age 1-4)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_phone" id="guest_phone" min="0" max="3"
+                                        aria-label="Infant" x-model="$store.user.reservation.infant" />
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name">Child (Age 5-17)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_address" id="guest_address" min="0" max="3"
+                                        aria-label="Child" x-model="$store.user.reservation.children" />
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name">adults (Age 18+)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_email" id="guest_email" aria-label="Adults" min="0"
+                                        max="5" value="01" x-model="$store.user.reservation.adults" />
+                                </section>
+                            </section>
+                        </section>
+                        <h4>Add Extra Amenities:</h4>
+                        <section class="nation_type" style="margin: 10px 0 30px 100px; display: flex;">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Wi-Fi">Wi-Fi: </label>
+                                    <input type="checkbox" name="Wi-Fi" id="Wi-Fi" aria-label="Wi-Fi"
+                                        style="height: fit-content; width: fit-content;"
+                                        x-model="$store.user.reservation.wifi">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Pool View">Pool View: </label>
+                                    <input type="checkbox" name="Pool View" id="Pool View" aria-label="Pool View"
+                                        style="height: fit-content; width: fit-content;"
+                                        x-model="$store.user.reservation.pool_view">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Garden View">Garden View: </label>
+                                    <input type="checkbox" name="Garden View" id="Garden View" aria-label="Garden View"
+                                        style="height: fit-content; width: fit-content;"
+                                        x-model="$store.user.reservation.garden_viwe">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Extra Beds">Extra Beds: </label>
+                                    <input type="number" name="Extra Beds" id="Extra Beds" aria-label="Extra Beds"
+                                        min="0" max="3" style="height: fit-content; width: 40px;"
+                                        x-model="$store.user.reservation.extra_bed">
+                                </section>
+                            </section>
+                        </section>
+                        <!-- <h4>Others:</h4>
+                        <section class="nation_type"
+                            style="margin: 10px 0 30px 100px; display: flex; flex-direction: column;">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="loyalty">Your Loyality Points: </label>
+                                    <b><span x-text="loyality_points"></span></b>
+                                </section>
+                            </section>
+                        </section> -->
+                        <section class="btn btns_grp border-0">
+                            <!-- <a href="#"><button type="button" class="btn btn_prev width_200">
+                                    <<< Previous</button></a> -->
+                            <button type="submit" class="btn btn_next width_200" style="left: 100%; position: relative;"
+                                x-on:click="cal_loyalty_points">Next
+                                >>></button>
+                        </section>
+                    </section>
+                </div>
+            </form>
+
+            <!-- Adventure section -->
+            <form x-on:submit.prevent="$store.adventure.updateAdventure">
+                <div class="form-step">
+                    <section class="room_section">
+                        <h2>Adventure Booking Details</h2>
+                        <h4>Type of Adventure:</h4>
+                        <section class="Adv_booking_type">
+                            <section class="Adv_booking_flex">
+                                <select name="Places of Adventuare" id="Places_of_Adventuare"
+                                    aria-label="places of adventure"
+                                    x-model="$store.adventure.adventure_reservation.adventure_type">
+                                    <option value="DEF">Places of Adventure</option>
+                                    <option value="Scuba Diving">Scuba Diving</option>
+                                </select>
+                            </section>
+                        </section>
+
+                        <h4>Preferred Date and Time:</h4>
+                        <section class="cheacking_dates">
+                            <section class="cheack_btn">
+                                <section class="cheack_btn_flex">
+                                    <label for="check-in">Date:</label>
+                                </section>
+                                <section class="cheack_btn_flex">
+                                    <input type="date" name="check-in" id="checkin" aria-label="Date"
+                                        x-model="$store.adventure.adventure_reservation.adventure_date">
+                                </section>
+                            </section>
+                            <section class="cheack_btn">
+                                <section class="cheack_btn_flex">
+                                    <label for="check-out">Time:</label>
+                                </section>
+                                <section class="cheack_btn_flex">
+                                    <input type="time" name="check_time" id="check_time" aria-label="Time"
+                                        x-model="$store.adventure.adventure_reservation.adventure_time">
+                                </section>
+                            </section>
+                        </section>
+
+                        <h4>Number of Participants:</h4>
+                        <section class="nation_type" style="margin: 10px 0 30px 100px; display: flex;">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Local">Local:</label>
+                                    <input type="checkbox" name="Nationality" id="Local" aria-label="Local"
+                                        style="height: fit-content; width: fit-content;"
+                                        onclick="toggleParticipants('Local');"
+                                        x-model="$store.adventure.adventure_reservation.ad_type_of_local">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Foreign">Foreign </label>
+                                    <input type="checkbox" name="Nationality" id="Foreign" aria-label="Foreign"
+                                        style="height: fit-content; width: fit-content;"
+                                        onclick="toggleParticipants('Foreign');"
+                                        x-model="$store.adventure.adventure_reservation.ad_type_of_foreign">
+                                </section>
+                            </section>
+                        </section>
+                        <section class="third_row" id="localParticipants">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name">Local Child (Age 5-17)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_address" id="guest_address" aria-label="Child"
+                                        min="0" x-model="$store.adventure.adventure_reservation.ad_local_children_num">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name">Local Adults (Age 18+)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_email" id="guest_email" aria-label="Adults" min="0"
+                                        x-model="$store.adventure.adventure_reservation.ad_local_adults_num">
+                                </section>
+                            </section>
+                        </section>
+
+                        <section class="third_row" id="foreignParticipants">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name">Foreign Child (Age 5-17)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_address" id="guest_address" aria-label="Child"
+                                        min="0" x-model="$store.adventure.adventure_reservation.ad_foreign_adults_num">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="last name">Foreign Adults (Age 18+)</label>
+                                </section>
+                                <section class="name_flex">
+                                    <input type="number" name="guest_email" id="guest_email" aria-label="Adults" min="0"
+                                        value="0"
+                                        x-model="$store.adventure.adventure_reservation.ad_foreign_children_num">
+                                </section>
+                            </section>
+                        </section>
+                        <h4>Need a guide:</h4>
+                        <section class="nation_type" style="margin: 10px 0 30px 100px; display: flex;">
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Local">Adult: </label>
+                                    <input type="number" name="Nationality" id="Local" aria-label="Local" min="0"
+                                        max="2" style="height: fit-content; width: fit-content;"
+                                        x-model="$store.adventure.adventure_reservation.guide_adults">
+                                </section>
+                            </section>
+                            <section class="name_titel">
+                                <section class="name_flex">
+                                    <label for="Foreign">Kids: </label>
+                                    <input type="number" name="Nationality" id="Foreign" aria-label="Foreign" min="0"
+                                        max="2" style="height: fit-content; width: fit-content;"
+                                        x-model="$store.adventure.adventure_reservation.guide_children">
+                                </section>
+                            </section>
+                        </section>
+
+                        <h4>Special Request:</h4>
+                        <section class="adventuare_request">
+                            <textarea id="w3review" name="w3review" rows="7" cols="120"
+                                x-model="$store.adventure.adventure_reservation.ad_spacial_request">
+                        </textarea>
+                        </section>
+                        <section class="btn btns_grp border-0">
+                            <a href="#" class="btn btn_prev width_200">
+                                <<< Previous</a>
+                                    <button type="submit" class="btn btn_next width_200">Next
+                                        >>></button>
+                        </section>
+                    </section>
+                </div>
+            </form>
+
+            <!-- Payment secction -->
+            <form x-on:submit.prevent="$store.user.updateUser">
+                <div class="form-step">
+                    <section class="payment_section">
+                        <h2>Payment Section</h2>
+                        <section class="payment_method">
+                            <section class="payment_method_items">
+                                <h4>Payment Method</h4>
+                                <section class="cheack_btn">
+                                    <section class="cheack_btn_flex">
+                                        <label for="adults">
+                                            <p style="margin-bottom: 0;">Promo code:</p>
+                                        </label>
+                                    </section>
+                                    <section class="cheack_btn_flex">
+                                        <input type="text" name="promo" id="promo" aria-label="Promo code"
+                                            x-bind:value="$store.user.reservation.promo_code"
+                                            x-model="$store.user.reservation.promo_code">
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="payment_method_flex">
+                                <section class="payment_method_type">
+                                    <input type="radio" id="credit_card" name="payment_method" value="credit_card"
+                                        aria-label="Credit card" x-model="$store.user.payment.card_type">
+                                    <label for="credit_card">Credit Card</label>
+                                </section>
+                                <section class="payment_method_type">
+                                    <input type="radio" id="debit_card" name="payment_method" value="debit_card"
+                                        aria-label="Debit card" x-model="$store.user.payment.card_type">
+                                    <label for="debit_card">Debit Card</label>
+                                </section>
+                                <section class="payment_method_type">
+                                    <input type="radio" id="paypal" name="payment_method" value="paypal"
+                                        aria-label="PayPal" x-model="$store.user.payment.card_type">
+                                    <label for="paypal">Paypal</label>
+                                </section>
+                            </section>
+
+                            <h4>Enter Your Card Details</h4>
+                            <section class="booking_input">
+                                <section class="payment_type">
+                                    <label for="card_holder_name" class="required">Card Holder Name:<span
+                                            class="required"></span></label>
+                                    <label for="card_number" class="required">Card Number:<span
+                                            class="required"></span></label>
+                                    <label for="card_holder_name" class="required">Expire Date:<span
+                                            class="required"></span></label>
+                                    <label for="security_code" class="required">Security Code:<span
+                                            class="required"></span></label>
+                                </section>
+                                <section class="payment_card_details">
+                                    <section>
+                                        <input type="text" name="Card Holder Name" id="Card_Holder_Name"
+                                            aria-label="Card holder name" maxlength="30"
+                                            x-model="$store.user.payment.card_holder">
+                                    </section>
+                                    <section>
+                                        <input type="number" name="card_number" id="card_number" min="0"
+                                            max="9999999999999999" aria-label="Card number"
+                                            placeholder="   9999-9999-9999-9999"
+                                            x-model="$store.user.payment.card_number">
+                                    </section>
+                                    <section>
+                                        <section style="padding: 0;">
+                                            <input x-mask="99/99" type="number" name="card_holder_name"
+                                                class="card_expire_num" id="card_expire_num" aria-label="Expire date"
+                                                maxlength="2" placeholder="    12" min="0" max="12"
+                                                x-model="$store.user.payment.card_expiry.month">
+                                            <h2 style="padding: 20px 10px 5px 10px;">/</h2><input type="number"
+                                                name="card_holder_name" id="card_expire_num" maxlength="2"
+                                                placeholder="    26" min="0" max="99"
+                                                x-model="$store.user.payment.card_expiry.year">
+                                        </section>
+                                    </section>
+                                    <section>
+                                        <input type="number" name="security_code" class="card_expire_num" min="0"
+                                            max="999" id="card_expire_num" aria-label="Security code" maxlength="8"
+                                            placeholder="  123" x-model="$store.user.payment.card_cvv">
+                                        <section class="pay_btn">
+                                            <button type="submit" class="btn"
+                                                style="background-color: rgb(181, 147, 63); width: 120px;">Pay
+                                                Now</button>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="btn btns_grp border-0">
+                                <a href="#" class="btn btn_prev width_200">
+                                    <<< Previous</a>
+                                        <a href="#"><button type="submit" class="btn btn_next width_200">Next
+                                                >>></button></a>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+            </form>
+
+            <!-- Verification section -->
+            <div class="form-step">
+                <div class="verify_form" style="font-family:'Times New Roman', Times, serif;">
+                    <div class="verify_title">
+                        <img src="/images/Home/icon_white.webp" alt="logo">
+                        <h4 style="text-transform: uppercase;">the rembario is reserved for you</h4>
+                        <div>
+                            <h5 for="loyalty">Your Loyality Points: <span x-text="loyality_points"></span></h5>
+                        </div>
+                        <div>
+                            <i class="fa fa-calendar-days"></i>
+                            <span x-text="$store.user.reservation.check_in"></span><span
+                                style="margin-left: 5px;">|</span>
+                            <span x-text="$store.user.reservation.check_out"></span>
+                        </div>
+                    </div>
+
+                    <table class="room_information">
+                        <thead>
+                            <tr>
+                                <th colspan="2" style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
+                                    Accommodation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Singale Room x <span x-text="$store.user.reservation.singleRoomsNum"></span></td>
+                                <td>LKR <span x-text="$store.user.reservation.singleRoomsNum * 25000"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Double Room x <span x-text="$store.user.reservation.doubleRoomsNum"></span></td>
+                                <td>LKR <span x-text="$store.user.reservation.doubleRoomsNum * 35000"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Triple Room x <span x-text="$store.user.reservation.tripleRoomsNum"></span></td>
+                                <td>LKR <span x-text="$store.user.reservation.tripleRoomsNum * 40000"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Extra Bed x <span x-text="$store.user.reservation.extra_bed"></span></td>
+                                <td>LKR <span x-text="$store.user.reservation.extra_bed * 8000"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Kids Above 5 Years x <span x-text="$store.user.reservation.children"></span>
+                                </td>
+                                <td>LKR <span x-text="$store.user.reservation.children * 5000"></span> extra for meals
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Discount "<span x-text="$store.user.reservation.promo_code"></span>"</td>
+                                <td>-LKR <span x-text="$store.user.reservation.total_discount"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Total of Accommodation</td>
+                                <td>LKR <span x-text="total_accommodation_cost"></span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
+                                    Adventure</th>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Adventure Place</td>
+                                <td><span x-text="$store.adventure.adventure_reservation.adventure_type"></span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-calendar-days"></i>Preferred Date</td>
+                                <td><span x-text="$store.adventure.adventure_reservation.adventure_date"></span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-clock"></i>Preferred Time</td>
+                                <td><span x-text="$store.adventure.adventure_reservation.adventure_time"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Local Adult x <span
+                                        x-text="$store.adventure.adventure_reservation.ad_local_adults_num"></span>
+                                </td>
+                                <td>LKR <span
+                                        x-text="$store.adventure.adventure_reservation.ad_local_adults_num * 5000"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Local Child x <span
+                                        x-text="$store.adventure.adventure_reservation.ad_local_children_num"></span>
+                                </td>
+                                <td>LKR <span
+                                        x-text="$store.adventure.adventure_reservation.ad_local_children_num * 2000"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Foreign Adult x <span
+                                        x-text="$store.adventure.adventure_reservation.ad_foreign_adults_num"></span>
+                                </td>
+                                <td>LKR <span
+                                        x-text="$store.adventure.adventure_reservation.ad_foreign_adults_num * 10000"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Foreign Adult x <span
+                                        x-text="$store.adventure.adventure_reservation.ad_foreign_children_num"></span>
+                                </td>
+                                <td>LKR <span
+                                        x-text="$store.adventure.adventure_reservation.ad_foreign_children_num * 5000"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Guide For Adult</td>
+                                <td>LKR <span
+                                        x-text="$store.adventure.adventure_reservation.guide_adults * 1000"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Guide For Childern</td>
+                                <td>LKR <span x-text="$store.adventure.adventure_reservation.guide_adults * 500"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Total of Adventure</td>
+                                <td>LKR <span x-text="total_adventure_cost"></span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">Cost
+                                    of Booking</th>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Total of Accommodation</td>
+                                <td>LKR <span x-text="total_accommodation_cost"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Total of Adventure</td>
+                                <td>LKR <span x-text="total_adventure_cost"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Total of Reservation</td>
+                                <td>LKR <span x-text="total_cost"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Total Discount</td>
+                                <td>LKR <span x-text="$store.user.reservation.total_discount"></span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Final Total</b></td>
+                                <td><b>LKR <span x-text="$store.user.reservation.final_total"></span></td></b>
+                            </tr>
+                    </table>
+
+
+
+                </div>
+                <section class="btn btns_grp border-0">
+                    <a href="#" class="btn btn_prev width_200">
+                        <<< Previous</a>
+                            <button class="btn width_200" style="margin-left: auto;" x-on:click="addToFavorites"><i
+                                    class="fa fa-bookmark fa-beat-fade" style="padding-right: 10px;"></i>Add To
+                                Favourite</button>
+                </section>
+            </div>
+
+            <!-- <a href="/example.html">next 01</a>
+                <button type="submit">next 02</button> -->
+            <!-- <button type="reset">Reset</button> -->
+
+        </article>
+
+        <!-- create footer -->
+        <footer>
+            <section class="booking_page_footer">
+                <section class="footer_flex">
+                    <section class="footer_infor">
+                        <p>The Rimbario<br> 53, Srimath Kudarathwatta Mawatha,<br> Kandy 20000, Sri Lanka.</p><br>
+                        <a href="tel:+94112545422">+94 112 545 422</a><br><br>
+                        <a href="mailto:infor@therimbariohotel.com">Inquiries: infor@therimbariohotel.com</a><br>
+                        <a href="mailto:infor@therimbariohotel.com">Reservations:
+                            reservations@therimbariohotel.com</a><br><br>
+                        <section class="s_icon">
+                            <ul>
+                                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwio14jlt5uBAxXISWwGHbxTD_QQmuEJegQIChAB&url=https%3A%2F%2Fwww.facebook.com%2Flogin%2F&usg=AOvVaw2NEj8NwnxhOue64pSijk7e&opi=89978449"
+                                        class="fa fa-facebook"
+                                        aria-label="Read more about the rimbario hotel through facebook"
+                                        target="_blank"></a>
+                                </li>
+                                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjk17L7uJuBAxUk1TgGHcrbCbYQjBB6BAgJEAE&url=https%3A%2F%2Ftwitter.com%2Flogin%3Flang%3Den&usg=AOvVaw0AMmJgcv8ZiZA73A_ttoE9&opi=89978449"
+                                        class="fa fa-twitter"
+                                        aria-label="Read more about the rimbario hotel through twiter"
+                                        target="_blank"></a>
+                                </li>
+                                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi5-M-FuZuBAxXI8TgGHfwsDA8QFnoECAYQAQ&url=https%3A%2F%2Fwww.youtube.com%2F&usg=AOvVaw0usXxGa_x5y1xoI_LaL0-1&opi=89978449"
+                                        class="fa fa-youtube"
+                                        aria-label="Read more about the rimbario hotel through youtube"
+                                        target="_blank"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="footer_logo">
+                        <a href="/index.html"><img src="/images/Home/Main_Logo_02.webp" alt="hotel logo"></a>
+                    </section>
+                </section>
+            </section>
+        </footer>
+    </main>
+    <script src="/store/accomodation.js"></script>
+    <script src="/store/adventure.js"></script>
+    <script src="/store/hotel.js"></script>
+    <script src="/store/payment.js"></script>
+    <script src="/store/user.js"></script>
+
+    <!-- Calculation Part -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('app', () => ({
+                coupons: [
+                    'Promo123',
+                ],
+
+                loyality_points: 0,
+
+                favorites: [],
+
+                cal_loyalty_points() {
+                    // if the booking has more than 3 rooms add 20 loyality points
+                    if (this.$store.user.reservation.singleRoomsNum >= 3) {
+                        this.loyality_points = parseInt(this.loyality_points) + 20;
+                    }
+                    if (this.$store.user.reservation.doubleRoomsNum >= 3) {
+                        this.loyality_points = parseInt(this.loyality_points) + 20;
+                    }
+                    if (this.$store.user.reservation.tripleRoomsNum >= 3) {
+                        this.loyality_points = parseInt(this.loyality_points) + 20;
+                    }
+
+                    // save the loyality points to localstorage
+                    localStorage.setItem('loyality_points', this.loyality_points);
+                },
+
+                addToFavorites() {
+                    // add the booking to favorites
+                    this.favorites.push(this.$store.user.reservation);
+
+                    // save the favorites to localstorage
+                    localStorage.setItem('favorites', JSON.stringify(this.favorites));
+
+                    //clear the user
+                    // this.profile = {
+                    //     titel: '',
+                    //     firstName: '',
+                    //     lastName: '',
+                    //     email: '',
+                    //     phone: '',
+                    //     address: '',
+                    //     contry: '',
+                    //     spacial_request: '',
+                    // },
+
+                    //     this.reservation = {
+                    //         Accomodation section........................
+                    //         hotel: 'The Rimbario Royal Hotel',
+                    //         promo_code: '',
+                    //         check_in: "",
+                    //         check_out: "",
+                    //         type_of_room: '',
+                    //         singleRoomsNum: 0,
+                    //         doubleRoomsNum: 0,
+                    //         tripleRoomsNum: 0,
+                    //         adults: 0,
+                    //         children: 0,
+                    //         infant: 0,
+                    //         extra_bed: 0,
+                    //         pool_view: false,
+                    //         garden_viwe: false,
+                    //         wifi: false,
+                    //     },
+
+                    //     payment = {
+                    //         card_number: null,
+                    //         card_holder: null,
+                    //         card_type: null,
+                    //         card_expiry: {
+                    //             month: null,
+                    //             year: null,
+                    //         },
+                    //         card_cvv: null,
+                    //     },
+                },
+
+                applyFavorite(reservation) {
+
+                    console.log(reservation);
+
+                    this.$store.user.reservation = reservation;
+
+                },
+
+                get total_adventure_cost() {
+                    let total = 0;
+                    total += this.$store.adventure.adventure_reservation.ad_local_adults_num * 5000;
+                    total += this.$store.adventure.adventure_reservation.ad_foreign_adults_num * 10000;
+                    total += this.$store.adventure.adventure_reservation.ad_local_children_num * 2000;
+                    total += this.$store.adventure.adventure_reservation.ad_foreign_children_num * 5000;
+                    total += this.$store.adventure.adventure_reservation.guide_adults * 1000;
+                    total += this.$store.adventure.adventure_reservation.guide_children * 500;
+                    this.$store.user.reservation.final_adventure_cost = total;
+                    return total;
+                },
+
+                get total_accommodation_cost() {
+                    let total = 0;
+                    total += this.$store.user.reservation.singleRoomsNum * 25000;
+                    total += this.$store.user.reservation.doubleRoomsNum * 35000;
+                    total += this.$store.user.reservation.tripleRoomsNum * 40000;
+                    total += this.$store.user.reservation.extra_bed * 8000;
+                    total += this.$store.user.reservation.children * 5000;
+                    this.$store.user.reservation.final_accommodation_cost = total;
+                    return total;
+                },
+
+                get total_cost() {
+                    let total = 0;
+                    total += this.$store.user.reservation.final_accommodation_cost;
+                    total += this.total_adventure_cost;
+                    this.$store.user.reservation.total_cost = total;
+
+                    //calculate the discount
+                    this.$store.user.reservation.total_discount = total * (this.$store.user.reservation.discount_percentage / 100);
+
+                    //calculate the final total
+                    this.$store.user.reservation.final_total = total - this.$store.user.reservation.total_discount;
+
+                    return total;
+                },
+
+                init() {
+                    // check if there are loyality_points in localstorage and load it
+                    if (localStorage.getItem('loyality_points') != null) {
+                        this.loyality_points = localStorage.getItem('loyality_points');
+                    }
+
+                    if (localStorage.getItem('favorites')) {
+                        this.favorites = JSON.parse(localStorage.getItem('favorites'));
+                    }
+
+                    // watch reservation.promo_code for changes and check if the code exists in the coupons array
+                    this.$watch('$store.user.reservation.promo_code', (value) => {
+                        if (this.coupons.includes(value)) {
+                            this.$store.user.reservation.discount_percentage = 5;
+                        } else {
+                            this.$store.user.reservation.discount_percentage = 0;
+                        }
+                    });
+
+                },
+            }));
+        })
+    </script>
+
+    <!--Popup Fav booking section -->
+    <div x-data="app" id="favorites">
+        <div id="blurBackGround" class="blur hideblur"></div>
+        <div id="popup" class="popupWindow hidePopupWindow">
+            <div class="popupWrap">
+                <h2 style="text-align: center; color: white;">Your Favourite Booking!</h2>
+                <!-- <p style="font-size: 50px;"></p> -->
+                <i class="fa fa-close fa-2x" id="closeBtn"></i>
+                <template x-for="favorite in favorites">
+                    <div class="points" style="color: aliceblue; display: flex;">
+                        <div>
+                            <table class="room_information">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"
+                                            style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
+                                            Accommodation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Singale Room x <span x-text="favorite.singleRoomsNum"></span>
+                                        </td>
+                                        <td>LKR <span x-text="favorite.singleRoomsNum * 25000"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Double Room x <span x-text="favorite.doubleRoomsNum"></span>
+                                        </td>
+                                        <td>LKR <span x-text="favorite.doubleRoomsNum * 35000"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Triple Room x <span x-text="favorite.tripleRoomsNum"></span>
+                                        </td>
+                                        <td>LKR <span x-text="favorite.tripleRoomsNum * 40000"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extra Bed x <span x-text="favorite.extra_bed"></span></td>
+                                        <td>LKR <span x-text="favorite.extra_bed * 8000"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kids Above 5 Years x <span x-text="favorite.children"></span>
+                                        </td>
+                                        <td>LKR <span x-text="favorite.children * 5000"></span> extra for
+                                            meals
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2"
+                                            style="text-align: center; font-size: 20px; padding: 20px 0 5px 0;">
+                                            Cost of Booking
+                                        </th>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>Total of Accommodation</td>
+                                        <td>LKR <span x-text="total_accommodation_cost"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Discount</td>
+                                        <td>LKR <span x-text="$store.user.reservation.total_discount"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Final Total</b></td>
+                                        <td><b>LKR <span x-text="$store.user.reservation.final_total"></span></td></b>
+                                    </tr>
+                            </table>
+                            <button class="btn width_200" style="margin-left: auto; margin-top: 25px; width: 315px;"
+                                x-on:click="applyFavorite(favorite)">Apply
+                                Favourite</button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

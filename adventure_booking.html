@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reservations | Room Section | Rimberio Royal Hotel</title>
+    <link rel="icon" type="image/png" href="/images/Home/icon_white.webp">
+    <!-- use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Outfit:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style/main.css"> 
+    <link rel="manifest" href="/site.webmanifest.json"/>
+</head>
+<body>
+    <header class="main_navigation" id="main_navigation">
+        <section class="main-logo" id="booking_logo">
+            <a href="/index.html"><img src="images/Home/Main_Logo_02.webp" alt="hotel logo" id="booking_logo"></a>
+        </section>
+    </header>
+
+    
+
+    <main class="main_booking_body">
+        <article class="booking_main_container">
+            <!-- create booking types -->
+            <section class="adventuare_page_booking_types">
+                <section class="adventuar_page_room_booking">
+                    <a href="/room_booking.html"><h3 style="color: black">accommodation</h3></a>
+                </section>
+                <section class="adventuara_booking">
+                    <a href="#"><h3 style="color: rgb(181, 147, 63);">adventure</h3></a>
+                </section>
+            </section>
+            <hr style="opacity: 60%; margin: 0 60px 0 60px;">
+            <!-- create booking form for room section -->
+            <section class="room_section form-step">
+                <h2>Adventure Booking Details</h2>
+                <h4>Type of Adventure:</h4>
+                <section class="Adv_booking_type">
+                    <section class="Adv_booking_flex">
+                        <select name="Places of Adventuare" id="Places_of_Adventuare" aria-label="places of adventure">
+                            <option value="DEF">Places of Adventure</option>
+                            <option value="1">Knuckles Mountain</option>
+                            <option value="2">Hanthana Mountian</option>
+                            <option value="3">Sigiriya Rock</option>
+                            <option value="4">White water Rafting</option>
+                        </select>
+                    </section>
+                    <section class="Adv_booking_flex">
+                        <select name="Type of Tour" id="Type_of_Tour" aria-label="types of tours">
+                            <option value="DEF">Type of Tour</option>
+                            <option value="1">Day Tour</option>
+                            <option value="2">Short Tour</option>
+                            <option value="3">Road Trip</option>
+                        </select>
+                    </section>
+                </section>
+
+                <h4>Preferred Date and Time:</h4>
+                <section class="cheacking_dates">
+                    <section class="cheack_btn">
+                        <section class="cheack_btn_flex">
+                            <label for="check-in">Date:</label>
+                        </section>
+                        <section class="cheack_btn_flex">
+                            <input type="date" name="check-in" id="check-in" aria-label="Date">
+                        </section>
+                    </section>
+                    <section class="cheack_btn">
+                        <section class="cheack_btn_flex">
+                            <label for="check-out">Time:</label>
+                        </section>
+                        <section class="cheack_btn_flex">
+                            <input type="time" name="check_time" id="check_time" aria-label="Time">
+                        </section>
+                    </section>
+                </section>
+
+                <h4>Number of Participants:</h4>
+                <section class="third_row">
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="first name">Infant (Age 0-2)</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="guest_phone" id="guest_phone" aria-label="Infant" maxlength="20" placeholder="Ex. 2">                    
+                        </section> 
+                    </section>
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="last name">Child (Age 3-11)</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="guest_address" id="guest_address" aria-label="Child" maxlength="20" placeholder="Ex. 0">
+                        </section>
+                    </section>
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="last name">adults (Age 12+)</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="guest_email" id="guest_email" aria-label="Adults" maxlength="20" placeholder="Ex. 0">
+                        </section>
+                    </section>  
+                </section>
+
+                <h4>Spacial Request:</h4>
+                <section class="adventuare_request">
+                    <textarea id="w3review" name="w3review" rows="7" cols="120"></textarea>                    
+                </section>
+            </section>
+
+            <!-- create guest infor -->
+            <section class="guest_infor">
+            <h2>Guest Information</h2>
+                <section class="first_row">
+                    <section class="name_titel">
+                        <label for="name">Titel</label>
+                        <select name="titel" id="titel" style="height: 40px; width: 100px;" aria-label="titel">
+                            <option value="1">Mr.</option>
+                            <option value="2">Ms.</option>
+                            <option value="3">Mrs.</option>
+                            <option value="4">Dr.</option>
+                            <option value="5">Rev.</option>
+                        </select>    
+                    </section>
+                </section>
+                <section class="second_row">
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="first name">First Name</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="first_name" id="first_name" aria-label="First name">
+                        </section>        
+                    </section>
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="last name">Last Name</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="Last_name" id="Last_name" aria-label="Last name">
+                        </section>        
+                    </section>
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="Contry">Contry</label>
+                        </section>
+                        <section class="name_flex">
+                            <select name="Contry" id="Contry" style="padding: 8px 95px;" aria-label="types of contyies">
+                                <option value="LK">Sri Lanka</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AX">Aland Islands</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                                <option value="AQ">Antarctica</option>
+                                <option value="AG">Antigua and Barbuda</option>
+                                <option value="AR">Argentina</option>
+                                <option value="AM">Armenia</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Australia</option>
+                                <option value="AT">Austria</option>
+                                <option value="AZ">Azerbaijan</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="BH">Bahrain</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BY">Belarus</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BJ">Benin</option>
+                                <option value="BM">Bermuda</option>
+                                <option value="BT">Bhutan</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="BW">Botswana</option>
+                                <option value="BV">Bouvet Island</option>
+                                <option value="BR">Brazil</option>
+                                <option value="IO">British Indian Ocean Territory</option>
+                                <option value="BN">Brunei Darussalam</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="BI">Burundi</option>
+                                <option value="KH">Cambodia</option>
+                                <option value="CM">Cameroon</option>
+                                <option value="CA">Canada</option>
+                                <option value="CV">Cape Verde</option>
+                                <option value="KY">Cayman Islands</option>
+                                <option value="CF">Central African Republic</option>
+                                <option value="TD">Chad</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CX">Christmas Island</option>
+                                <option value="CC">Cocos (Keeling) Islands</option>
+                                <option value="CO">Colombia</option>
+                                <option value="KM">Comoros</option>
+                                <option value="CG">Congo</option>
+                                <option value="CD">Congo, Democratic Republic of the Congo</option>
+                                <option value="CK">Cook Islands</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="CI">Cote D'Ivoire</option>
+                                <option value="HR">Croatia</option>
+                                <option value="CU">Cuba</option>
+                                <option value="CW">Curacao</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="DK">Denmark</option>
+                                <option value="DJ">Djibouti</option>
+                                <option value="DM">Dominica</option>
+                                <option value="DO">Dominican Republic</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="EG">Egypt</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="GQ">Equatorial Guinea</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="EE">Estonia</option>
+                                <option value="ET">Ethiopia</option>
+                                <option value="FK">Falkland Islands (Malvinas)</option>
+                                <option value="FO">Faroe Islands</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="FI">Finland</option>
+                                <option value="FR">France</option>
+                                <option value="GF">French Guiana</option>
+                                <option value="PF">French Polynesia</option>
+                                <option value="TF">French Southern Territories</option>
+                                <option value="GA">Gabon</option>
+                                <option value="GM">Gambia</option>
+                                <option value="GE">Georgia</option>
+                                <option value="DE">Germany</option>
+                                <option value="GH">Ghana</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="GR">Greece</option>
+                                <option value="GL">Greenland</option>
+                                <option value="GD">Grenada</option>
+                                <option value="GP">Guadeloupe</option>
+                                <option value="GU">Guam</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GG">Guernsey</option>
+                                <option value="GN">Guinea</option>
+                                <option value="GW">Guinea-Bissau</option>
+                                <option value="GY">Guyana</option>
+                                <option value="HT">Haiti</option>
+                                <option value="HM">Heard Island and Mcdonald Islands</option>
+                                <option value="VA">Holy See (Vatican City State)</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IN">India</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="IR">Iran, Islamic Republic of</option>
+                                <option value="IQ">Iraq</option>
+                                <option value="IE">Ireland</option>
+                                <option value="IM">Isle of Man</option>
+                                <option value="IL">Israel</option>
+                                <option value="IT">Italy</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japan</option>
+                                <option value="JE">Jersey</option>
+                                <option value="JO">Jordan</option>
+                                <option value="KZ">Kazakhstan</option>
+                                <option value="KE">Kenya</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="KP">Korea, Democratic People's Republic of</option>
+                                <option value="KR">Korea, Republic of</option>
+                                <option value="XK">Kosovo</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="KG">Kyrgyzstan</option>
+                                <option value="LA">Lao People's Democratic Republic</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LB">Lebanon</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="LR">Liberia</option>
+                                <option value="LY">Libyan Arab Jamahiriya</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MO">Macao</option>
+                                <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                                <option value="MG">Madagascar</option>
+                                <option value="MW">Malawi</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="MV">Maldives</option>
+                                <option value="ML">Mali</option>
+                                <option value="MT">Malta</option>
+                                <option value="MH">Marshall Islands</option>
+                                <option value="MQ">Martinique</option>
+                                <option value="MR">Mauritania</option>
+                                <option value="MU">Mauritius</option>
+                                <option value="YT">Mayotte</option>
+                                <option value="MX">Mexico</option>
+                                <option value="FM">Micronesia, Federated States of</option>
+                                <option value="MD">Moldova, Republic of</option>
+                                <option value="MC">Monaco</option>
+                                <option value="MN">Mongolia</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="MS">Montserrat</option>
+                                <option value="MA">Morocco</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="MM">Myanmar</option>
+                                <option value="NA">Namibia</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="AN">Netherlands Antilles</option>
+                                <option value="NC">New Caledonia</option>
+                                <option value="NZ">New Zealand</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="NE">Niger</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="NU">Niue</option>
+                                <option value="NF">Norfolk Island</option>
+                                <option value="MP">Northern Mariana Islands</option>
+                                <option value="NO">Norway</option>
+                                <option value="OM">Oman</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="PW">Palau</option>
+                                <option value="PS">Palestinian Territory, Occupied</option>
+                                <option value="PA">Panama</option>
+                                <option value="PG">Papua New Guinea</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="PH">Philippines</option>
+                                <option value="PN">Pitcairn</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PR">Puerto Rico</option>
+                                <option value="QA">Qatar</option>
+                                <option value="RE">Reunion</option>
+                                <option value="RO">Romania</option>
+                                <option value="RU">Russian Federation</option>
+                                <option value="RW">Rwanda</option>
+                                <option value="BL">Saint Barthelemy</option>
+                                <option value="SH">Saint Helena</option>
+                                <option value="KN">Saint Kitts and Nevis</option>
+                                <option value="LC">Saint Lucia</option>
+                                <option value="MF">Saint Martin</option>
+                                <option value="PM">Saint Pierre and Miquelon</option>
+                                <option value="VC">Saint Vincent and the Grenadines</option>
+                                <option value="WS">Samoa</option>
+                                <option value="SM">San Marino</option>
+                                <option value="ST">Sao Tome and Principe</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="SN">Senegal</option>
+                                <option value="RS">Serbia</option>
+                                <option value="CS">Serbia and Montenegro</option>
+                                <option value="SC">Seychelles</option>
+                                <option value="SL">Sierra Leone</option>
+                                <option value="SG">Singapore</option>
+                                <option value="SX">Sint Maarten</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="SB">Solomon Islands</option>
+                                <option value="SO">Somalia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                <option value="SS">South Sudan</option>
+                                <option value="ES">Spain</option>
+                                <option value="SD">Sudan</option>
+                                <option value="SR">Suriname</option>
+                                <option value="SJ">Svalbard and Jan Mayen</option>
+                                <option value="SZ">Swaziland</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="SY">Syrian Arab Republic</option>
+                                <option value="TW">Taiwan, Province of China</option>
+                                <option value="TJ">Tajikistan</option>
+                                <option value="TZ">Tanzania, United Republic of</option>
+                                <option value="TH">Thailand</option>
+                                <option value="TL">Timor-Leste</option>
+                                <option value="TG">Togo</option>
+                                <option value="TK">Tokelau</option>
+                                <option value="TO">Tonga</option>
+                                <option value="TT">Trinidad and Tobago</option>
+                                <option value="TN">Tunisia</option>
+                                <option value="TR">Turkey</option>
+                                <option value="TM">Turkmenistan</option>
+                                <option value="TC">Turks and Caicos Islands</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="UG">Uganda</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="US">United States</option>
+                                <option value="UM">United States Minor Outlying Islands</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="UZ">Uzbekistan</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Viet Nam</option>
+                                <option value="VG">Virgin Islands, British</option>
+                                <option value="VI">Virgin Islands, U.s.</option>
+                                <option value="WF">Wallis and Futuna</option>
+                                <option value="EH">Western Sahara</option>
+                                <option value="YE">Yemen</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabwe</option>
+                            </select>
+                        </section>
+                    </section>
+                </section>
+                <section class="third_row">
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="last name">Language</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="guest_language" id="guest_language" aria-label="Language" placeholder="language 01, language 02">
+                        </section>
+                    </section>
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="first name">Phone</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="guest_phone" id="guest_phone" aria-label="Phone number" maxlength="20" placeholder="+94710000000">                    
+                        </section> 
+                    </section>
+                    <section class="name_titel">
+                        <section class="name_flex">
+                            <label for="last name">Email</label>
+                        </section>
+                        <section class="name_flex">
+                            <input type="text" name="guest_email" id="guest_email" aria-label="Email" placeholder="help@example.com">
+                        </section>
+                    </section>  
+                </section>
+            </section>
+
+            <!-- create payment section -->
+            <section class="payment_section">
+                <h2>Payment Section</h2>
+                <section class="payment_method">
+                    <section class="payment_method_items">
+                        <h4>Payment Method</h4>
+                        <section class="cheack_btn">
+                            <section class="cheack_btn_flex">
+                                <label for="adults"><h4>Promotion code</h4></label>
+                            </section>
+                            <section class="cheack_btn_flex">
+                                <input type="number" name="promo" id="promo" aria-label="Promo code">
+                            </section>
+                        </section>
+                    </section>
+                    <section class="payment_method_flex">
+                        <section class="payment_method_type">
+                            <input type="radio" id="credit_card" name="payment_method" value="credit_card" aria-label="Credit card">
+                            <label for="credit_card">Credit Card</label>
+                        </section>
+                        <section class="payment_method_type">
+                            <input type="radio" id="debit_card" name="payment_method" value="debit_card" aria-label="Debit card">
+                            <label for="debit_card">Debit Card</label>
+                        </section>
+                        <section class="payment_method_type">
+                            <input type="radio" id="paypal" name="payment_method" value="paypal" aria-label="PayPal">
+                            <label for="paypal">Paypal</label>
+                        </section>
+                    </section>
+                    <!-- enter card details -->
+                    <h4>Enter Your Card Details</h4>
+                    <section class="booking_input">
+                        <section class="payment_type">
+                            <label for="card_holder_name">Card Holder Name</label>
+                            <label for="card_number">Card Number</label>
+                            <label for="card_holder_name">Expire Date</label>
+                            <label for="security_code">Security Code</label>
+                        </section>
+                        <section class="payment_card_details">
+                            <section>
+                                <input type="text" name="Card Holder Name" id="Card_Holder_Name" aria-label="Card holder name" maxlength="30">
+                            </section>
+                            <section>
+                                <input type="number" name="card_number" id="card_number" aria-label="Card number" maxlength="16" placeholder="   1234 5678 9012 3456">
+                            </section>
+                            <section>
+                                <section style="padding: 0;">
+                                    <input type="number" name="card_holder_name" class="card_expire_num" id="card_expire_num" aria-label="Expire date" maxlength="2" placeholder="    12" ><h2 style="padding: 20px 10px 5px 10px;">/</h2><input type="number" name="card_holder_name" id="card_expire_num" maxlength="2" placeholder="    12">
+                                </section>
+                            </section>
+                            <section>
+                                <input type="number" name="security_code" class="card_expire_num" id="card_expire_num" aria-label="Security code" maxlength="8" placeholder="  123">
+                                <section class="pay_btn">
+                                    <a href="#"><button type="submit" class="btn">Pay Now</button></a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="adventuare_page_booking_types adventuar_page_room_booking" id="room_booking_btn">
+                <a href="/room_booking.html"><h3 style="color: black"><< accommodation</h3></a>
+            </section>
+        </article>
+        <!-- create footer -->
+        <footer>
+            <section class="booking_page_footer">
+                <section class="footer_flex">
+                    <section class="footer_infor">
+                        <p>The Rimbario<br> 53, Srimath Kudarathwatta Mawatha,<br> Kandy 20000, Sri Lanka.</p><br>
+                        <a href="tel:+94112545422">+94 112 545 422</a><br><br>
+                        <a href="mailto:infor@therimbariohotel.com">Inquiries:  infor@therimbariohotel.com</a><br>
+                        <a href="mailto:infor@therimbariohotel.com">Reservations:  reservations@therimbariohotel.com</a><br><br>
+                        <section class="s_icon">
+                            <ul>
+                                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwio14jlt5uBAxXISWwGHbxTD_QQmuEJegQIChAB&url=https%3A%2F%2Fwww.facebook.com%2Flogin%2F&usg=AOvVaw2NEj8NwnxhOue64pSijk7e&opi=89978449" class="fa fa-facebook" aria-label="Read more about the rimbario hotel through facebook" target="_blank"></a></li>
+                                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjk17L7uJuBAxUk1TgGHcrbCbYQjBB6BAgJEAE&url=https%3A%2F%2Ftwitter.com%2Flogin%3Flang%3Den&usg=AOvVaw0AMmJgcv8ZiZA73A_ttoE9&opi=89978449" class="fa fa-twitter" aria-label="Read more about the rimbario hotel through twiter" target="_blank"></a></li>
+                                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi5-M-FuZuBAxXI8TgGHfwsDA8QFnoECAYQAQ&url=https%3A%2F%2Fwww.youtube.com%2F&usg=AOvVaw0usXxGa_x5y1xoI_LaL0-1&opi=89978449" class="fa fa-youtube" aria-label="Read more about the rimbario hotel through youtube" target="_blank"></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="footer_logo">
+                        <a href="/index.html"><img src="/images/Home/Main_Logo_02.webp" alt="hotel logo"></a>
+                    </section>
+                </section>
+            </section>
+        </footer>
+    </main>
+</body>
+</html>

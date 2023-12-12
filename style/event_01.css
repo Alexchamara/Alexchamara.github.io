@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.06rem;
+    /* background-color: rgba(255, 108, 133, 0.503); */
+    background-image: url(/images/event_01/pngwing.com.png);
+    background-size: 90%;
+    background-color: rgba(255, 59, 59, 0.594);
+    background-blend-mode: soft-light;
+}
+
+a { 
+    text-decoration: none;
+    cursor:pointer;
+    background-color: transparent;
+}
+
+hr{
+    opacity: 0.5;
+    margin-bottom: 50px;
+}
+
+/* add animation */
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+   100%{
+       opacity: 1;
+       transform: translateY(0px);
+   }
+}
+
+/* style header */
+header{
+    height: 95px;
+    background: #000000b1;
+    z-index: 999;
+}
+
+.main-logo img{
+    height: 116px;
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    transform: translate(-50%, -50%);
+}
+
+/* style main body */
+/* style intro */
+.main_event1_body{
+    margin: 30px 20px 30px 20px;
+}
+
+.intro_container{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.main_titel{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.main_titel h1{
+    animation-delay: 0.3s;
+}
+
+.main_intro{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro_container .main_intro p{
+    padding: 10px 50px 20px 50px;
+    animation-delay: 0.6s;
+}
+
+.main_image{
+    width: 100%;
+    height: 630px;
+    overflow: hidden;
+}
+
+.main_image img{
+    animation-delay: 0.9s;
+}
+
+.event_details_container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: relative;
+    padding: 10px;
+    background: #d0746c9e;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.main_image .event_details_container{
+    animation-delay: 1.3s;
+
+}
+
+.event_details{
+    display: flex;
+    padding: 10px;
+    align-items: baseline;
+}
+
+.event_details section{
+    padding: 10px 11px 5px 11px;}
+
+.event_details_container .event_details .detail_body p{
+    margin-left: 40px;
+}
+
+.main_image section{
+    display: flex;
+    flex-direction: column;
+}
+
+.main_image_subsection{
+    bottom: 550px;
+    position: relative;
+    left: 65%;
+}
+
+/* style concert section */
+.concert_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.concert_container .main_titel{
+    margin-bottom: 30px;
+}
+
+.concert_images{
+    display: flex;
+    flex-direction: row;
+}
+
+.concert_images img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.img_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.img_flex img{
+    width: 100%;
+    height: 248px;
+    object-fit: cover;
+}
+
+.concert_container .main_intro{
+    margin: 30px 50px;
+}
+
+/* style event game section */
+.event_game_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.event_game_container .main_titel{
+    font-size: 40px;
+}
+
+.event_game_container .main_intro{
+    margin: 30px 50px 0 50px;
+}
+
+.event_game_container section{
+    margin-top: 30px;
+}
+
+.types_of_games{
+    font-size: 18px;
+    padding-left: 130px;
+    padding-right: 70px;
+    margin: 10px 0 60px 0;
+}
+
+.types_of_games li{
+    margin-top: 20px;
+}
+
+/* style ticket section */
+.ticket_body{
+    display: flex;
+    margin: 50px 50px;
+    justify-content: space-around;
+}
+
+.ticket_body_container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.ticket_body_price{
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.ticket_body_price p{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ticket_body_price a{
+    margin-top: 10px;
+}
+
+.book-button{
+    margin: 20px 0 20px 240px;
+    padding: 6px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* style footer */
+footer{
+    margin-top: 100px;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    box-shadow: -7px -7px 10px #808080, 7px 7px 10px #808080;
+}
+
+footer a{
+    color: white;
+}
+
+.footer_flex{
+    display: flex;
+    justify-content: center;
+}
+
+.footer_infor{
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 26px;
+    padding: 20px 80px 20px 0;
+    
+}
+
+.footer_infor .s_icon ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_infor .s_icon li a{
+    margin: 0 21px;
+}
+
+
+/* style responsive part */
+@media screen and (max-width: 767px) {
+    /* style intro section */
+    .event_details_container {
+        width: 50%;
+    }
+
+    .intro_container .main_intro p{
+        padding: 10px 20px 20px 20px;
+    }
+
+    .main_image_subsection{
+        bottom: 550px;
+    }
+
+    .main_image_subsection{
+        left: 0%;
+        align-items: center;
+    }
+
+    .event_details{
+        padding: 0;
+    }
+
+    .event_details_container .event_details .detail_body p{
+        margin-left: 0px;
+    }
+
+    /* style game section */
+    .types_of_games{
+        padding-left: 78px;
+    }
+
+    /* style ticket section */
+    .ticket_body_container{
+        margin: 0;
+    }
+
+    .ticket_body{
+        margin: 0;
+    }
+
+    .book-button{
+        margin: 0;
+    }
+
+    .concert_container .main_intro{
+        margin: 30px 0;
+    }
+
+    /* style footer */
+    .footer_infor{
+        padding: 0;
+    }
+}
+
+/* responsive titels */
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 25px;
+    }
+
+    h2, h3{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .types_of_games{
+        padding-left: 30px;
+    }
+}
+
+/* resposive booking btn */
+@media screen and (max-width: 1160px) {
+    .book-button{
+        margin: 0;
+    }
+
+    .footer_infor{
+        padding: 0;
+    }
+}

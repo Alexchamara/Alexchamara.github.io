@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reservations | Room Section | Rimberio Royal Hotel</title>
+    <link rel="icon" type="image/png" href="/images/Home/icon_white.webp">
+    <!-- use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Outfit:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="stylesheet" href="/style/booking.css">
+    <link rel="manifest" href="/site.webmanifest.json"/>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/script.js" defer></script>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <main x-data="app">
+        <article class="booking_index_main_container">
+            <div class="booking_index_left">
+                <div class="booking_index_text">
+                    Visit The Rimbario Royal Hotel,<br>
+                    Kandy for a memorable, <br>
+                    convenient and luxurious stay in the heart of Kandy. <br>
+                    Your preferred five-star accommodation in the city
+                </div>
+                <div class="booking_index_img">
+                    <img src="/images/Home/main_body/exciting_imgs/room.webp" alt="booking_index_img">
+                </div>
+                
+            </div>
+            <form x-on:submit="$store.user.updateUser">
+                <div class="booking_index_right">
+                    <h4 style="letter-spacing: 0.4rem; text-align: center; margin: 0 0 20px 0; font-weight: bold; padding-right: 26px;">CHECK AVAILABILITY</h4>
+                    <div class="cheacking_dates">
+                        <div class="cheack_btn">
+                            <div class="cheack_btn_flex">
+                                <label for="check-in"><h5>Check-in:</h5></label>
+                            </div>
+                            <div class="cheack_btn_flex">
+                                <input type="date" name="check-in" id="check-in" 
+                                style="background-color: transparent; border-color: white; text-align: center; font-size: 15px; color: white;" 
+                                x-model="$store.user.reservation.check_in" >
+                            </div>
+                        </div>
+                        <div class="cheack_btn">
+                            <div class="cheack_btn_flex">
+                                <label for="check-out"><h5>Check-out:</h5></label>
+                            </div>
+                            <div class="cheack_btn_flex">
+                                <input type="date" name="check-out" id="check-out" 
+                                style="background-color: transparent; border-color: white; text-align: center; font-size: 15px; color: white; "
+                                x-model="$store.user.reservation.check_out">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="cheack_btn">
+                        <div class="cheack_btn_flex">
+                            <!-- <label for="adults"><h4>Promotion code</h4></label> -->
+                        </div>
+                        <div class="cheack_btn_flex">
+                            <input type="text" name="promo" id="promo" aria-label="Promo code" placeholder="PROMO CODE" 
+                            style="background-color: transparent; border-color: white; text-align: center; font-size: 13px; letter-spacing: 0.3rem; color: white; width: 428px; height: 50px; font-weight: bold;"
+                            x-model="$store.user.reservation.promo_code">
+                        </div>
+                    </div>
+                    <div class="booking_index_btn">
+                        <!-- create a button for booking -->
+                        <a href="/example.html">
+                        <button type="submit"><b>BOOK NOW</b></button>
+                        <a>
+                            <a href="/example.html">next 01</a>
+                            <a href="/room_booking.html">Newx 02</a>
+                    </div>
+                </div>
+            </form>
+        </article>
+    </main>
+    <script src="/store/accomodation.js"></script>
+    <script src="/store/adventure.js"></script>
+    <script src="/store/hotel.js"></script>
+    <script src="/store/payment.js"></script>
+    <script src="/store/user.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('app', () => ({
+
+            }));
+        })
+    </script>
+</body>
+</html>

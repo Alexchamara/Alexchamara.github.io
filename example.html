@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+    <link rel="icon" type="image/png" href="/images/Home/icon_white.webp">
+    <!-- use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Outfit:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="manifest" href="/site.webmanifest.json"/>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <div x-data="app">
+        <div>
+            <span>Check-in: </span>
+            <span x-text="$store.user.reservation.check_in"></span>
+        </div>
+        <div>
+            <span>Check-out: </span>
+            <span x-text="$store.user.reservation.check_out"></span>
+        </div>
+        <div>
+            <span>Promo: </span>
+            <span x-text="$store.user.reservation.promo_code"></span>
+        </div>
+        <div>
+            <h2 x-text="$store.hote.hotelName"></h2>
+        </div>
+    </div>
+
+    <a href="/booking_index.html">back</a>
+
+
+    <script src="/store/accomodation.js"></script>
+    <script src="/store/adventure.js"></script>
+    <script src="/store/hotel.js"></script>
+    <script src="/store/payment.js"></script>
+    <script src="/store/user.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('app', () => ({
+
+            }));
+        })
+    </script>
+</body>
+</html>

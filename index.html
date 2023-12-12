@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home | Rimberio Royal Hotel</title>
+    <link rel="icon" type="image/png" href="/images/Home/icon_white.webp">
+        <!-- use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Outfit:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <!-- add social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- add style sheet -->
+    <link rel="stylesheet" href="/style/main.css"> 
+    <link rel="stylesheet" href="/style/booking.css">
+        <!-- add jeson -->
+    <link rel="manifest" href="/site.webmanifest.json"/>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/store/user.js" defer></script>
+</head>
+<body>
+    <!-- Navigatioin bar (nav bar - logo - book now) -->
+    <header class="main_navigation" id="main_navigation">
+        <section class="navigetion_bar">
+
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar">MENU</label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li id="drop_down"><a href="/restaurants.html">Restuarent +</a>
+                        <ul>
+                            <li><a href="/event_01.html" id="fist_part">Valentine Day Party</a></li>
+                            <li><a href="/event_02.html" id="second_part">Christmas Day Party</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/adventure.html">Adventuare</a></li>
+                    <li><a href="/branches.html">Branch</a></li>
+                    <li><a href="/Booking/room_booking.html" target="_blank" class="book-button" id="mob_booking">book now</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="main-logo">
+            <a href="#"><img src="images/Home/Main_Logo_02.webp" alt="hotel logo"></a>
+        </section>
+        <section id="booking_btn">
+            <a href="/room_booking.html" target="_self" class="book-button" id="booking">book now</a>
+            
+        </section>
+    </header>
+
+
+    <!-- main image section (hero) -->
+    <section class="home-main-image-container">
+        <section class="small_word">
+            <p>glimpses of heaven</p>
+        </section>
+        <section class="large_word">
+            <p>welcome to our exquisite hotel</p>
+        </section>
+    </section>
+
+    <main class="main_home_body">
+        <article class="home_main_container">
+            <!-- Introdution section -->
+            <section class="welcome_section">
+                <section class="animate_section">
+                    <img src="/images/Home/icon_black.webp" alt="animate_icon">
+                </section>
+                <!-- introdution phara -->
+                <section class="welcome_grid">
+                    <section class="heading">
+                        <p class="tital_top">submerse yourself</p>
+                        <p class="tital_bottom">the rimberio</p>
+                        <p class="intro">Overlooking the pristine central coast of Sri Lanka, Rimberio is home to an 18-hole championship golf course, which is the only resort course in the country, an expansive spa featuring exceptional Ayurveda treatments, and a unique artisan village that showcases local arts and crafts.</p>
+                        <ul>
+                            <li>274 albums, including 20 suites</li>
+                            <li>Sri Lanka’s only 18-hole golf resort course</li>
+                            <li>Rimberio Cares: Our commitment to your well-being in our care</li>
+                        </ul>
+                    </section>
+                    <!-- Introdution imgs -->
+                    <section class="welcome_img">
+                        <img src="/images/Home/main_body/welcome_section/pexels-volkan-vardar-3887985.webp" class="img_01" alt="hotel view">
+                        <img src="/images/Home/main_body/welcome_section/pexels-studio-negarin-2909515.webp" class="img_02" alt="hotel view">
+                        <img src="/images/Home/main_body/welcome_section/pexels-helena-lopes-4279124.webp" class="img_03" alt="hotel view">
+                        <!-- mob img -->
+                        <img src="/images/Home/main_body/welcome_section/mob_img.webp" class="mob_img" alt="hotel view">
+                    </section>
+                </section>
+            </section>
+            <!-- create album section -->
+            <section class="album_section">
+                <section class="album_header">
+                    <span class="tital_top">our store album</span>
+                    <span class="tital_bottom">a momentary of the rimbario</span>
+                </section>
+                <section class="album_imgs_section">
+                    <section class="slide_section">
+                        <!-- radio botton for navigation -->
+                        <input type="radio" name="radion_btn" id="radio1">
+                        <input type="radio" name="radion_btn" id="radio2">
+                        <input type="radio" name="radion_btn" id="radio3">
+                        <input type="radio" name="radion_btn" id="radio4">
+                        <!-- album imgs -->
+                        <section class="slide first">
+                            <img src="/images/Home/main_body/store_album/pool.webp" alt="outside viwe of hotel">
+                        </section>
+                        <section class="slide">
+                            <img src="/images/Home/main_body/store_album/bar.webp" alt="inside viwe of hotel">
+                        </section>
+                        <section class="slide">
+                            <img src="/images/Home/main_body/store_album/hall.webp" alt="restuarant viwe of hotel">
+                        </section>
+                        <section class="slide">
+                            <img src="/images/Home/main_body/store_album/room.webp" alt="accommodation viwe of hotel">
+                        </section>
+                    </section>
+                    <!-- navigation for album -->
+                    <section class="navigetion_manual">
+                        <label for="radio3" class="manual_text">exterior</label>
+                        <label for="radio2" class="manual_text">inteior</label>
+                        <label for="radio1" class="manual_text">banquet</label>
+                        <label for="radio4" class="manual_text">room</label>
+                    </section>
+                </section>
+                <!-- introduction for hotel album -->
+                <section class="album_intro">
+                    <span class="first_phara">Discover a home away from home at The Rimbario. Situated in the picturesque Kandy, our hotel is a symphony of elegance and charm. With a commitment to impeccable service and an unwavering dedication to guest satisfaction.</span>
+                    <span class="second_phara">We invite you to indulge in the exceptional. From our thoughtfully appointed rooms to our world-class amenities, The Rimbario promises an unforgettable stay. Join us as we redefine hospitality and create lasting memories for you and your loved ones.</span>
+                </section>
+            </section>
+
+            <!-- create exciting section -->
+            <section class="exciting_section">
+                <section class="animate_section">
+                    <img src="/images/Home/icon_black.webp" alt="animate_icon">
+                    <section class="vertical_line"></section>
+                </section>
+                <section class="exciting_heading">
+                    <section class="heading">
+                        <span class="tital_top">explore these</span>
+                        <span class="tital_bottom">exciting happenings</span>
+                        <p class="intro">Experience the thrill of luxury at its finest,
+                            In our hotel, exciting moments never diminish.
+                            From gourmet dining to views so grand,
+                            Your stay with us is simply in demand!</p>
+                    </section>
+                </section>
+                <section class="exciting_imgs_section">
+                    <section class="exciting_slide_section">
+                        <!-- radio botton for navigation -->
+                        <input type="radio" name="radion_btn" id="radio01">
+                        <input type="radio" name="radion_btn" id="radio02">
+                        <input type="radio" name="radion_btn" id="radio03">
+                        <input type="radio" name="radion_btn" id="radio04">
+                        <!-- exciting imgs -->
+                        <section class="slide first">
+                            <img src="/images/Home/main_body/exciting_imgs/dining.webp" alt="dinign image">
+                        </section>
+                        <section class="slide">
+                            <img src="/images/Home/main_body/exciting_imgs/room.webp" alt="viwe of room">
+                        </section>
+                        <section class="slide">
+                            <img src="/images/Home/main_body/exciting_imgs/spa.webp" alt="viwe of spa">
+                        </section>
+                        <section class="slide">
+                            <img src="/images/Home/main_body/exciting_imgs/wedding.webp" alt="wedding image">
+                        </section>
+                        
+                    </section>
+                    <section class="exciting_navigetion_manual">
+                        <label for="radio03" class="exciting_manual_text">dining</label>
+                        <label for="radio02" class="exciting_manual_text">rooms</label>
+                        <label for="radio01" class="exciting_manual_text">spas</label>
+                        <label for="radio04" class="exciting_manual_text">weddings</label>
+                    </section>
+                </section>
+                <section class="exciting_heading">
+                    <p class="intro_last">Our hotels are your gateway to a kaleidoscope of activities and events that awaken your senses and ignite your spirit. From captivating themed parties that transport you to far-off lands, to immersive workshops and masterclasses that unlock your hidden talents, our commitment to delivering moments of sheer delight knows no bounds.</p>
+                </section>
+            </section>
+
+            <!-- create offer section -->
+            <section class="offer_section">
+                <section class="animate_section">
+                    <img src="/images/Home/icon_black.webp" alt="animate_icon">
+                    <section class="vertical_line"></section>
+                </section>
+                <section class="offer_heading">
+                    <section class="heading">
+                        <span class="tital_top">kandy happenings</span>
+                        <span class="tital_bottom">promotions</span>
+                        <p class="intro">Welcome to our luxurious oasis of hospitality, where your every desire is met with unparalleled elegance and warmth. At The Rimbario, we believe that every guest should experience the epitome of comfort and indulgence. That's why we are thrilled to present a selection of exclusive offers and packages designed to enhance your stay and make your visit truly unforgettable.</p>
+                        <p class="intro">Whether you're seeking a romantic getaway, a family adventure, or a peaceful retreat from the everyday, our thoughtfully curated offers cater to every taste and occasion. From sumptuous dining experiences to rejuvenating spa treatments, we've crafted these packages to ensure that your time with us is nothing short of extraordinary.</p>
+                        <section class="offer_list">
+                            <ol>
+                                <li><a>Romance Packages</a></li>
+                                <li><a>Spa Packages</a></li>
+                                <li><a>Golf Packages</a></li>
+                                <li><a>Family Packages</a></li>
+                                <li><a>Adventure Packages</a></li>
+                            </ol>
+                        </section>
+                    </section>
+                    <section class="offer_img">
+                        <p class="offer_btn">viwe all promotions</p>
+                        <img src="/images/Home/main_body/offer_imgs/pexels-antoni-shkraba-5810664.webp" class="desktop_img" alt="offer image">
+                        <img src="/images/Home/main_body/offer_imgs/mob_img.webp" class="mob_img" alt="offer image">
+                    </section>
+                </section>
+            </section>
+        </article>
+        <!-- create footer -->
+        <footer>
+            <section class="footer_flex">
+                <section class="footer_infor">
+                    <p>The Rimbario<br> 53, Srimath Kudarathwatta Mawatha,<br> Kandy 20000, Sri Lanka.</p><br>
+                    <a href="tel:+94112545422">+94 112 545 422</a><br><br>
+                    <a href="mailto:infor@therimbariohotel.com">Inquiries:  infor@therimbariohotel.com</a><br>
+                    <a href="mailto:infor@therimbariohotel.com">Reservations:  reservations@therimbariohotel.com</a><br><br>
+                    <section class="s_icon">
+                        <ul>
+                            <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwio14jlt5uBAxXISWwGHbxTD_QQmuEJegQIChAB&url=https%3A%2F%2Fwww.facebook.com%2Flogin%2F&usg=AOvVaw2NEj8NwnxhOue64pSijk7e&opi=89978449" class="fa fa-facebook" aria-label="Read more about the rimbario hotel through facebook" target="_blank"></a></li>
+                            <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjk17L7uJuBAxUk1TgGHcrbCbYQjBB6BAgJEAE&url=https%3A%2F%2Ftwitter.com%2Flogin%3Flang%3Den&usg=AOvVaw0AMmJgcv8ZiZA73A_ttoE9&opi=89978449" class="fa fa-twitter" aria-label="Read more about the rimbario hotel through twiter" target="_blank"></a></li>
+                            <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi5-M-FuZuBAxXI8TgGHfwsDA8QFnoECAYQAQ&url=https%3A%2F%2Fwww.youtube.com%2F&usg=AOvVaw0usXxGa_x5y1xoI_LaL0-1&opi=89978449" class="fa fa-youtube" aria-label="Read more about the rimbario hotel through youtube" target="_blank"></a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section class="menu">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="/restaurants.html">dining</a></li>
+                        <li><a href="/adventure.html">adventure</a></li>
+                        <li><a href="/branches.html">branches</a></li>
+                        <li><a href="#">spa</a></li>
+                        <li><a href="#">accommodation</a></li>
+                        <li><a href="#">weddings</a></li>
+                        <li><a href="#">promotions</a></li>
+                        <li><a href="#">location</a></li>
+                        <li><a href="#">facilities</a></li>
+                        <li><a href="#">gallery</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </section>
+                <section class="footer_logo">
+                    <img src="/images/Home/Main_Logo_02.webp" alt="hotel logo">
+                </section>
+            </section>
+        </footer>
+    </main> 
+</body>
+</html>
