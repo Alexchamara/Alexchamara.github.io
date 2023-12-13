@@ -64,10 +64,6 @@ document.addEventListener('alpine:init', () => {
         "user_payment_details",
         JSON.stringify(this.$store.user.payment)
       );
-      // localStorage.setItem(
-      //   "user_cost_details",
-      //   JSON.stringify(this.$store.user.cost)
-      // );
     },
 
 

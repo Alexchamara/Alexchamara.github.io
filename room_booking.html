@@ -809,8 +809,7 @@
                                             placeholder="  123" x-model="$store.user.payment.card_cvv">
                                         <section class="pay_btn">
                                             <button type="submit" class="btn"
-                                                style="background-color: rgb(181, 147, 63); width: 120px;">Pay
-                                                Now</button>
+                                                style="background-color: rgb(181, 147, 63); width: 120px;">Pay Now</button>
                                         </section>
                                     </section>
                                 </section>
@@ -976,23 +975,21 @@
                                 <td><b>Final Total</b></td>
                                 <td><b>LKR <span x-text="$store.user.reservation.final_total"></span></td></b>
                             </tr>
-                    </table>
+                        </table>
+                        <section class="btn btns_grp border-0">
+                            <a href="#" class="btn btn_prev width_200">
+                                <<< Previous</a>
+                                    <button class="btn width_200" style="margin-left: auto;" x-on:click="addToFavorites"><i
+                                            class="fa fa-bookmark fa-beat-fade" style="padding-right: 10px;"></i>Add To
+                                        Favourite</button>
+                        </section>
 
 
 
                 </div>
-                <section class="btn btns_grp border-0">
-                    <a href="#" class="btn btn_prev width_200">
-                        <<< Previous</a>
-                            <button class="btn width_200" style="margin-left: auto;" x-on:click="addToFavorites"><i
-                                    class="fa fa-bookmark fa-beat-fade" style="padding-right: 10px;"></i>Add To
-                                Favourite</button>
-                </section>
             </div>
 
-            <!-- <a href="/example.html">next 01</a>
-                <button type="submit">next 02</button> -->
-            <!-- <button type="reset">Reset</button> -->
+
 
         </article>
 
@@ -1067,6 +1064,53 @@
                     localStorage.setItem('loyality_points', this.loyality_points);
                 },
 
+                clearPage() {
+                    //clear the user
+                    this.$store.user.reservation.profile = {
+                        titel: '',
+                        firstName: '',
+                        lastName: '',
+                        email: '',
+                        phone: '',
+                        address: '',
+                        contry: '',
+                        spacial_request: '',
+                    },
+
+                        this.$store.user.reservation = {
+                            hotel: 'The Rimbario Royal Hotel',
+                            promo_code: '',
+                            check_in: "",
+                            check_out: "",
+                            type_of_room: '',
+                            singleRoomsNum: 0,
+                            doubleRoomsNum: 0,
+                            tripleRoomsNum: 0,
+                            adults: 0,
+                            children: 0,
+                            infant: 0,
+                            extra_bed: 0,
+                            pool_view: false,
+                            garden_viwe: false,
+                            wifi: false,
+                        },
+
+                        this.$store.user.payment = {
+                            card_number: null,
+                            card_holder: null,
+                            card_type: null,
+                            card_expiry: {
+                                month: null,
+                                year: null,
+                            },
+                            card_cvv: null,
+                        },
+
+                        // clear the booking from localstorage
+                        localStorage.removeItem('$store.user.profile');
+                        localStorage.removeItem('$store.user.reservation');
+                },
+
                 addToFavorites() {
                     // add the booking to favorites
                     this.favorites.push(this.$store.user.reservation);
@@ -1075,24 +1119,23 @@
                     localStorage.setItem('favorites', JSON.stringify(this.favorites));
 
                     //clear the user
-                    // this.profile = {
-                    //     titel: '',
-                    //     firstName: '',
-                    //     lastName: '',
-                    //     email: '',
-                    //     phone: '',
-                    //     address: '',
-                    //     contry: '',
-                    //     spacial_request: '',
+                    // this.$store.user.reservation.profile = {
+                    //     titel: null,
+                    //     firstName: null,
+                    //     lastName: null,
+                    //     email: null,
+                    //     phone: null,
+                    //     address: null,
+                    //     contry: null,
+                    //     spacial_request: null,
                     // },
 
-                    //     this.reservation = {
-                    //         Accomodation section........................
+                    //     this.$store.user.reservation = {
                     //         hotel: 'The Rimbario Royal Hotel',
-                    //         promo_code: '',
-                    //         check_in: "",
-                    //         check_out: "",
-                    //         type_of_room: '',
+                    //         promo_code: null,
+                    //         check_in: null,
+                    //         check_out: null,
+                    //         type_of_room: null,
                     //         singleRoomsNum: 0,
                     //         doubleRoomsNum: 0,
                     //         tripleRoomsNum: 0,
@@ -1105,7 +1148,7 @@
                     //         wifi: false,
                     //     },
 
-                    //     payment = {
+                    //     this.$store.user.payment = {
                     //         card_number: null,
                     //         card_holder: null,
                     //         card_type: null,
@@ -1115,12 +1158,14 @@
                     //         },
                     //         card_cvv: null,
                     //     },
+
+                    // clear the booking from localstorage
+                    // localStorage.removeItem('$store.user.updateUser');
+
                 },
 
                 applyFavorite(reservation) {
-
-                    console.log(reservation);
-
+                    // set the reservation to the user
                     this.$store.user.reservation = reservation;
 
                 },
@@ -1264,9 +1309,9 @@
                                             <td>LKR <span x-text="total_accommodation_cost"></span></td>
                                         </tr>
                                         <!-- <tr>
-                                        <td>Total Discount</td>
-                                        <td>LKR <span x-text="favorite.total_discount"></span></td>
-                                    </tr> -->
+                                                <td>Total Discount</td>
+                                                <td>LKR <span x-text="favorite.total_discount"></span></td>
+                                            </tr> -->
                                         <tr>
                                             <td><b>Final Total</b></td>
                                             <td><b>LKR <span x-text="favorite.final_total"></span></td></b>
@@ -1281,6 +1326,7 @@
             </div>
         </div>
     </div>
+
 
 </body>
 
