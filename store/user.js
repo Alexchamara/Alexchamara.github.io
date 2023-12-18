@@ -1,7 +1,6 @@
 document.addEventListener('alpine:init', () => {
   Alpine.store('user', {
 
-
     profile: {
       titel: '',
       firstName: '',
@@ -40,6 +39,19 @@ document.addEventListener('alpine:init', () => {
       final_total: 0,
     },
 
+    adventure_reservation: {
+      adventure_type: "",
+      adventure_date: "",
+      adventure_time: "",
+      ad_local_adults_num: 0,
+      ad_local_children_num: 0,
+      ad_foreign_adults_num: 0,
+      ad_foreign_children_num: 0,
+      guide_adults: 0,
+      guide_children: 0,
+      ad_spacial_request: '',
+    },
+
     payment: {
       card_number: null,
       card_holder: null,
@@ -64,6 +76,10 @@ document.addEventListener('alpine:init', () => {
         "user_payment_details",
         JSON.stringify(this.$store.user.payment)
       );
+      localStorage.setItem(
+        "user_adventure_reservation",
+        JSON.stringify(this.$store.user.adventure_reservation)
+      );
     },
 
 
@@ -74,10 +90,8 @@ document.addEventListener('alpine:init', () => {
         JSON.parse(localStorage.getItem("user_reservation")) || this.reservation;
       this.payment =
         JSON.parse(localStorage.getItem("user_payment_details")) || this.payment;
-      // this.cost =
-      //   JSON.parse(localStorage.getItem("user_cost_details")) || this.cost;
-
-
+      this.adventure_reservation =
+        JSON.parse(localStorage.getItem("user_adventure_reservation")) || this.adventure_reservation;
     }
   });
 });

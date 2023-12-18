@@ -591,7 +591,7 @@
             </form>
 
             <!-- Adventure section -->
-            <form x-on:submit.prevent="$store.adventure.updateAdventure">
+            <form x-on:submit.prevent="$store.user.updateUser">
                 <div class="form-step">
                     <section class="room_section">
                         <h2>Adventure Booking Details</h2>
@@ -600,8 +600,8 @@
                             <section class="Adv_booking_flex">
                                 <select name="Places of Adventuare" id="Places_of_Adventuare"
                                     aria-label="places of adventure"
-                                    x-model="$store.adventure.adventure_reservation.adventure_type">
-                                    <option value="DEF">Places of Adventure</option>
+                                    x-model="$store.user.adventure_reservation.adventure_type">
+                                    <option value="None">Places of Adventure</option>
                                     <option value="Scuba Diving">Scuba Diving</option>
                                 </select>
                             </section>
@@ -615,7 +615,7 @@
                                 </section>
                                 <section class="cheack_btn_flex">
                                     <input type="date" name="check-in" id="checkin" aria-label="Date"
-                                        x-model="$store.adventure.adventure_reservation.adventure_date">
+                                        x-model="$store.user.adventure_reservation.adventure_date">
                                 </section>
                             </section>
                             <section class="cheack_btn">
@@ -624,7 +624,7 @@
                                 </section>
                                 <section class="cheack_btn_flex">
                                     <input type="time" name="check_time" id="check_time" aria-label="Time"
-                                        x-model="$store.adventure.adventure_reservation.adventure_time">
+                                        x-model="$store.user.adventure_reservation.adventure_time">
                                 </section>
                             </section>
                         </section>
@@ -637,7 +637,7 @@
                                     <input type="checkbox" name="Nationality" id="Local" aria-label="Local"
                                         style="height: fit-content; width: fit-content;"
                                         onclick="toggleParticipants('Local');"
-                                        x-model="$store.adventure.adventure_reservation.ad_type_of_local">
+                                        x-model="$store.user.adventure_reservation.ad_type_of_local">
                                 </section>
                             </section>
                             <section class="name_titel">
@@ -646,7 +646,7 @@
                                     <input type="checkbox" name="Nationality" id="Foreign" aria-label="Foreign"
                                         style="height: fit-content; width: fit-content;"
                                         onclick="toggleParticipants('Foreign');"
-                                        x-model="$store.adventure.adventure_reservation.ad_type_of_foreign">
+                                        x-model="$store.useruser.adventure_reservation.ad_type_of_foreign">
                                 </section>
                             </section>
                         </section>
@@ -657,7 +657,7 @@
                                 </section>
                                 <section class="name_flex">
                                     <input type="number" name="guest_address" id="guest_address" aria-label="Child"
-                                        min="0" x-model="$store.adventure.adventure_reservation.ad_local_children_num">
+                                        min="0" x-model="$store.user.adventure_reservation.ad_local_children_num">
                                 </section>
                             </section>
                             <section class="name_titel">
@@ -666,7 +666,7 @@
                                 </section>
                                 <section class="name_flex">
                                     <input type="number" name="guest_email" id="guest_email" aria-label="Adults" min="0"
-                                        x-model="$store.adventure.adventure_reservation.ad_local_adults_num">
+                                        x-model="$store.user.adventure_reservation.ad_local_adults_num">
                                 </section>
                             </section>
                         </section>
@@ -678,7 +678,7 @@
                                 </section>
                                 <section class="name_flex">
                                     <input type="number" name="guest_address" id="guest_address" aria-label="Child"
-                                        min="0" x-model="$store.adventure.adventure_reservation.ad_foreign_adults_num">
+                                        min="0" x-model="$store.user.adventure_reservation.ad_foreign_adults_num">
                                 </section>
                             </section>
                             <section class="name_titel">
@@ -688,7 +688,7 @@
                                 <section class="name_flex">
                                     <input type="number" name="guest_email" id="guest_email" aria-label="Adults" min="0"
                                         value="0"
-                                        x-model="$store.adventure.adventure_reservation.ad_foreign_children_num">
+                                        x-model="$store.user.adventure_reservation.ad_foreign_children_num">
                                 </section>
                             </section>
                         </section>
@@ -699,7 +699,7 @@
                                     <label for="Local">Adult: </label>
                                     <input type="number" name="Nationality" id="Local" aria-label="Local" min="0"
                                         max="2" style="height: fit-content; width: fit-content;"
-                                        x-model="$store.adventure.adventure_reservation.guide_adults">
+                                        x-model="$store.user.adventure_reservation.guide_adults">
                                 </section>
                             </section>
                             <section class="name_titel">
@@ -707,7 +707,7 @@
                                     <label for="Foreign">Kids: </label>
                                     <input type="number" name="Nationality" id="Foreign" aria-label="Foreign" min="0"
                                         max="2" style="height: fit-content; width: fit-content;"
-                                        x-model="$store.adventure.adventure_reservation.guide_children">
+                                        x-model="$store.user.adventure_reservation.guide_children">
                                 </section>
                             </section>
                         </section>
@@ -715,7 +715,7 @@
                         <h4>Special Request:</h4>
                         <section class="adventuare_request">
                             <textarea id="w3review" name="w3review" rows="7" cols="120"
-                                x-model="$store.adventure.adventure_reservation.ad_spacial_request">
+                                x-model="$store.user.adventure_reservation.ad_spacial_request">
                         </textarea>
                         </section>
                         <section class="btn btns_grp border-0">
@@ -809,7 +809,8 @@
                                             placeholder="  123" x-model="$store.user.payment.card_cvv">
                                         <section class="pay_btn">
                                             <button type="submit" class="btn"
-                                                style="background-color: rgb(181, 147, 63); width: 120px;">Pay Now</button>
+                                                style="background-color: rgb(181, 147, 63); width: 120px;">Pay
+                                                Now</button>
                                         </section>
                                     </section>
                                 </section>
@@ -817,8 +818,7 @@
                             <section class="btn btns_grp border-0">
                                 <a href="#" class="btn btn_prev width_200">
                                     <<< Previous</a>
-                                        <a href="#"><button type="submit" class="btn btn_next width_200">Next
-                                                >>></button></a>
+                                        <button type="submit" class="btn btn_next width_200">Next >>></button>
                             </section>
                         </section>
                     </section>
@@ -890,57 +890,57 @@
                         <tbody>
                             <tr>
                                 <td>Adventure Place</td>
-                                <td><span x-text="$store.adventure.adventure_reservation.adventure_type"></span></td>
+                                <td><span x-text="$store.user.adventure_reservation.adventure_type"></span></td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-calendar-days"></i>Preferred Date</td>
-                                <td><span x-text="$store.adventure.adventure_reservation.adventure_date"></span></td>
+                                <td><span x-text="$store.user.adventure_reservation.adventure_date"></span></td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-clock"></i>Preferred Time</td>
-                                <td><span x-text="$store.adventure.adventure_reservation.adventure_time"></span></td>
+                                <td><span x-text="$store.user.adventure_reservation.adventure_time"></span></td>
                             </tr>
                             <tr>
                                 <td>Local Adult x <span
-                                        x-text="$store.adventure.adventure_reservation.ad_local_adults_num"></span>
+                                        x-text="$store.user.adventure_reservation.ad_local_adults_num"></span>
                                 </td>
                                 <td>LKR <span
-                                        x-text="$store.adventure.adventure_reservation.ad_local_adults_num * 5000"></span>
+                                        x-text="$store.user.adventure_reservation.ad_local_adults_num * 5000"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Local Child x <span
-                                        x-text="$store.adventure.adventure_reservation.ad_local_children_num"></span>
+                                        x-text="$store.user.adventure_reservation.ad_local_children_num"></span>
                                 </td>
                                 <td>LKR <span
-                                        x-text="$store.adventure.adventure_reservation.ad_local_children_num * 2000"></span>
+                                        x-text="$store.user.adventure_reservation.ad_local_children_num * 2000"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Foreign Adult x <span
-                                        x-text="$store.adventure.adventure_reservation.ad_foreign_adults_num"></span>
+                                        x-text="$store.user.adventure_reservation.ad_foreign_adults_num"></span>
                                 </td>
                                 <td>LKR <span
-                                        x-text="$store.adventure.adventure_reservation.ad_foreign_adults_num * 10000"></span>
+                                        x-text="$store.user.adventure_reservation.ad_foreign_adults_num * 10000"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Foreign Adult x <span
-                                        x-text="$store.adventure.adventure_reservation.ad_foreign_children_num"></span>
+                                        x-text="$store.user.adventure_reservation.ad_foreign_children_num"></span>
                                 </td>
                                 <td>LKR <span
-                                        x-text="$store.adventure.adventure_reservation.ad_foreign_children_num * 5000"></span>
+                                        x-text="$store.user.adventure_reservation.ad_foreign_children_num * 5000"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Guide For Adult</td>
                                 <td>LKR <span
-                                        x-text="$store.adventure.adventure_reservation.guide_adults * 1000"></span>
+                                        x-text="$store.user.adventure_reservation.guide_adults * 1000"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Guide For Childern</td>
-                                <td>LKR <span x-text="$store.adventure.adventure_reservation.guide_adults * 500"></span>
+                                <td>LKR <span x-text="$store.user.adventure_reservation.guide_adults * 500"></span>
                                 </td>
                             </tr>
                             <tr>
@@ -975,17 +975,14 @@
                                 <td><b>Final Total</b></td>
                                 <td><b>LKR <span x-text="$store.user.reservation.final_total"></span></td></b>
                             </tr>
-                        </table>
-                        <section class="btn btns_grp border-0">
-                            <a href="#" class="btn btn_prev width_200">
-                                <<< Previous</a>
-                                    <button class="btn width_200" style="margin-left: auto;" x-on:click="addToFavorites"><i
-                                            class="fa fa-bookmark fa-beat-fade" style="padding-right: 10px;"></i>Add To
-                                        Favourite</button>
-                        </section>
-
-
-
+                    </table>
+                    <section class="btn btns_grp border-0">
+                        <a href="#" class="btn btn_prev width_200">
+                            <<< Previous</a>
+                                <button class="btn width_200" style="margin-left: auto;" x-on:click="addToFavorites"><i
+                                        class="fa fa-bookmark fa-beat-fade" style="padding-right: 10px;"></i>Add To
+                                    Favourite</button>
+                    </section>
                 </div>
             </div>
 
@@ -1048,6 +1045,8 @@
 
                 favorites: [],
 
+                summury: [],
+
                 cal_loyalty_points() {
                     // if the booking has more than 3 rooms add 20 loyality points
                     if (this.$store.user.reservation.singleRoomsNum >= 3) {
@@ -1108,7 +1107,16 @@
 
                         // clear the booking from localstorage
                         localStorage.removeItem('$store.user.profile');
-                        localStorage.removeItem('$store.user.reservation');
+                    localStorage.removeItem('$store.user.reservation');
+                },
+
+                summuryForm() {
+                    this.summury.push(this.$store.user.updateUser);
+                    // this.summury.push(this.$store.user.adventure_reservation);
+
+                    // save the summury to localstorage
+                    localStorage.setItem('summury', JSON.stringify(this.summury));
+
                 },
 
                 addToFavorites() {
@@ -1119,48 +1127,48 @@
                     localStorage.setItem('favorites', JSON.stringify(this.favorites));
 
                     //clear the user
-                    // this.$store.user.reservation.profile = {
-                    //     titel: null,
-                    //     firstName: null,
-                    //     lastName: null,
-                    //     email: null,
-                    //     phone: null,
-                    //     address: null,
-                    //     contry: null,
-                    //     spacial_request: null,
-                    // },
+                    this.$store.user.reservation.profile = {
+                        titel: null,
+                        firstName: null,
+                        lastName: null,
+                        email: null,
+                        phone: null,
+                        address: null,
+                        contry: null,
+                        spacial_request: null,
+                    },
 
-                    //     this.$store.user.reservation = {
-                    //         hotel: 'The Rimbario Royal Hotel',
-                    //         promo_code: null,
-                    //         check_in: null,
-                    //         check_out: null,
-                    //         type_of_room: null,
-                    //         singleRoomsNum: 0,
-                    //         doubleRoomsNum: 0,
-                    //         tripleRoomsNum: 0,
-                    //         adults: 0,
-                    //         children: 0,
-                    //         infant: 0,
-                    //         extra_bed: 0,
-                    //         pool_view: false,
-                    //         garden_viwe: false,
-                    //         wifi: false,
-                    //     },
+                        this.$store.user.reservation = {
+                            hotel: 'The Rimbario Royal Hotel',
+                            promo_code: null,
+                            check_in: null,
+                            check_out: null,
+                            type_of_room: null,
+                            singleRoomsNum: 0,
+                            doubleRoomsNum: 0,
+                            tripleRoomsNum: 0,
+                            adults: 0,
+                            children: 0,
+                            infant: 0,
+                            extra_bed: 0,
+                            pool_view: false,
+                            garden_viwe: false,
+                            wifi: false,
+                        },
 
-                    //     this.$store.user.payment = {
-                    //         card_number: null,
-                    //         card_holder: null,
-                    //         card_type: null,
-                    //         card_expiry: {
-                    //             month: null,
-                    //             year: null,
-                    //         },
-                    //         card_cvv: null,
-                    //     },
+                        this.$store.user.payment = {
+                            card_number: null,
+                            card_holder: null,
+                            card_type: null,
+                            card_expiry: {
+                                month: null,
+                                year: null,
+                            },
+                            card_cvv: null,
+                        },
 
-                    // clear the booking from localstorage
-                    // localStorage.removeItem('$store.user.updateUser');
+                        // clear the booking from localstorage
+                        localStorage.removeItem('$store.user.updateUser');
 
                 },
 
@@ -1172,12 +1180,12 @@
 
                 get total_adventure_cost() {
                     let total = 0;
-                    total += this.$store.adventure.adventure_reservation.ad_local_adults_num * 5000;
-                    total += this.$store.adventure.adventure_reservation.ad_foreign_adults_num * 10000;
-                    total += this.$store.adventure.adventure_reservation.ad_local_children_num * 2000;
-                    total += this.$store.adventure.adventure_reservation.ad_foreign_children_num * 5000;
-                    total += this.$store.adventure.adventure_reservation.guide_adults * 1000;
-                    total += this.$store.adventure.adventure_reservation.guide_children * 500;
+                    total += this.$store.user.adventure_reservation.ad_local_adults_num * 5000;
+                    total += this.$store.user.adventure_reservation.ad_foreign_adults_num * 10000;
+                    total += this.$store.user.adventure_reservation.ad_local_children_num * 2000;
+                    total += this.$store.user.adventure_reservation.ad_foreign_children_num * 5000;
+                    total += this.$store.user.adventure_reservation.guide_adults * 1000;
+                    total += this.$store.user.adventure_reservation.guide_children * 500;
                     this.$store.user.reservation.final_adventure_cost = total;
                     return total;
                 },
@@ -1216,6 +1224,10 @@
 
                     if (localStorage.getItem('favorites')) {
                         this.favorites = JSON.parse(localStorage.getItem('favorites'));
+                    }
+
+                    if (localStorage.getItem('summury')) {
+                        this.summury = JSON.parse(localStorage.getItem('summury'));
                     }
 
                     // watch reservation.promo_code for changes and check if the code exists in the coupons array
